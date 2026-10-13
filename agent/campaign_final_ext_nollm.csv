@@ -1,0 +1,24 @@
+scenario,backend,seed,replicate,tag,orch_args,duration,speed,autoplace,set
+# Final top-up B (extension arms, NO LLM endpoint needed; results dir agent/results_v2_ext): 10 more no-op episodes with autonomy off (E3 noop-off N=20),
+# 5 more rule episodes at path-loss exponent 2.0 and 5 at 4.0 (E5 rule arms N=10).
+# Run: python3 agent/campaign.py agent/campaign_final_ext_nollm.csv --results-dir agent/results_v2_ext --parallel 1
+s1_peaceful,noop,20821,1,e3_noauto,,30,5,false,
+s1_peaceful,noop,20822,2,e3_noauto,,30,5,false,
+s1_peaceful,noop,20823,3,e3_noauto,,30,5,false,
+s1_peaceful,noop,20824,4,e3_noauto,,30,5,false,
+s1_peaceful,noop,20825,5,e3_noauto,,30,5,false,
+s1_peaceful,noop,20826,6,e3_noauto,,30,5,false,
+s1_peaceful,noop,20827,7,e3_noauto,,30,5,false,
+s1_peaceful,noop,20828,8,e3_noauto,,30,5,false,
+s1_peaceful,noop,20829,9,e3_noauto,,30,5,false,
+s1_peaceful,noop,20830,10,e3_noauto,,30,5,false,
+s1_peaceful,rule,20851,1,e5_pl2,,30,5,true,6g_path_loss_exponent=2.0
+s1_peaceful,rule,20852,2,e5_pl2,,30,5,true,6g_path_loss_exponent=2.0
+s1_peaceful,rule,20853,3,e5_pl2,,30,5,true,6g_path_loss_exponent=2.0
+s1_peaceful,rule,20854,4,e5_pl2,,30,5,true,6g_path_loss_exponent=2.0
+s1_peaceful,rule,20855,5,e5_pl2,,30,5,true,6g_path_loss_exponent=2.0
+s1_peaceful,rule,20856,1,e5_pl4,,30,5,true,6g_path_loss_exponent=4.0
+s1_peaceful,rule,20857,2,e5_pl4,,30,5,true,6g_path_loss_exponent=4.0
+s1_peaceful,rule,20858,3,e5_pl4,,30,5,true,6g_path_loss_exponent=4.0
+s1_peaceful,rule,20859,4,e5_pl4,,30,5,true,6g_path_loss_exponent=4.0
+s1_peaceful,rule,20860,5,e5_pl4,,30,5,true,6g_path_loss_exponent=4.0

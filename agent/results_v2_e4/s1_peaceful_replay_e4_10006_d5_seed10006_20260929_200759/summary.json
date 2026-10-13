@@ -1,0 +1,32 @@
+{
+  "decisions_logged": 29,
+  "decisions_executed": 29,
+  "max_lag_frames": 0,
+  "lag_violations": 0,
+  "stale_ignored": 0,
+  "rejected_untagged": 0,
+  "action_mismatches": [],
+  "validation_outcomes": {
+    "noop": 2,
+    "executed_place": 11,
+    "skipped_invalid_position": 10,
+    "skipped_water": 6
+  },
+  "seed_log": "[6G Seed] Synced RNG seeded with 10006 at Initialize; probe draws 96754 569194",
+  "game_id": "9bfebb6a76911b71f5b6134bccddbfe7",
+  "match_ended": true,
+  "wall_clock_s": 436,
+  "peak_rss_mb": 5980,
+  "mem_max_gb": "7",
+  "aslr_disabled": true,
+  "ai_order_delay": 45,
+  "ai_orders_late": 0,
+  "ai_order_lag_hist": "0=4809,1=336,2=227,3=88,4=43,5=30,6=10,7=8,8=7,9=6,10=10,11=7,12=6,13=3,14=7,15=15,16=9,17=11,18=5,19=5,20=11,21=7,22=4,23=7,24=4,25=5,26=4,27=13,28=26,29=18",
+  "speed_ramp": "Game speed ramped to 5x at frame 180",
+  "ai_warmup_frame": 150,
+  "engine_killed": false,
+  "orchestrator_died": false,
+  "llm_parse_status": null,
+  "llm_infra_errors": 0,
+  "llm_attempts_total": null
+}

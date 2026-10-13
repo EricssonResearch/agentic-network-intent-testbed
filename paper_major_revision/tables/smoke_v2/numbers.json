@@ -1,0 +1,1631 @@
+{
+  "inv_s1_peaceful_llm_valid": {
+    "value": 1,
+    "definition": "valid episodes",
+    "n": null,
+    "unit": "",
+    "nd": 0,
+    "source": "",
+    "text": "1"
+  },
+  "inv_s1_peaceful_llm_discarded": {
+    "value": 2,
+    "definition": "discarded episodes",
+    "n": null,
+    "unit": "",
+    "nd": 0,
+    "source": "",
+    "text": "2"
+  },
+  "inv_s1_peaceful_rule_valid": {
+    "value": 23,
+    "definition": "valid episodes",
+    "n": null,
+    "unit": "",
+    "nd": 0,
+    "source": "",
+    "text": "23"
+  },
+  "inv_s1_peaceful_rule_discarded": {
+    "value": 12,
+    "definition": "discarded episodes",
+    "n": null,
+    "unit": "",
+    "nd": 0,
+    "source": "",
+    "text": "12"
+  },
+  "inv_s1_peaceful_noop_valid": {
+    "value": 0,
+    "definition": "valid episodes",
+    "n": null,
+    "unit": "",
+    "nd": 0,
+    "source": "",
+    "text": "0"
+  },
+  "inv_s1_peaceful_noop_discarded": {
+    "value": 1,
+    "definition": "discarded episodes",
+    "n": null,
+    "unit": "",
+    "nd": 0,
+    "source": "",
+    "text": "1"
+  },
+  "inv_s1_peaceful_replay_valid": {
+    "value": 2,
+    "definition": "valid episodes",
+    "n": null,
+    "unit": "",
+    "nd": 0,
+    "source": "",
+    "text": "2"
+  },
+  "inv_s1_peaceful_replay_discarded": {
+    "value": 0,
+    "definition": "discarded episodes",
+    "n": null,
+    "unit": "",
+    "nd": 0,
+    "source": "",
+    "text": "0"
+  },
+  "inv_total_valid": {
+    "value": 24,
+    "definition": "valid episodes (all conditions, replay excluded)",
+    "n": null,
+    "unit": "",
+    "nd": 0,
+    "source": "",
+    "text": "24"
+  },
+  "inv_total_discarded": {
+    "value": 15,
+    "definition": "discarded episodes (all conditions)",
+    "n": null,
+    "unit": "",
+    "nd": 0,
+    "source": "",
+    "text": "15"
+  },
+  "cond_s1_peaceful_llm_n": {
+    "value": 1,
+    "definition": "episodes",
+    "n": null,
+    "unit": "",
+    "nd": 0,
+    "source": "",
+    "text": "1"
+  },
+  "cond_s1_peaceful_llm_avg_mean": {
+    "value": 100.0,
+    "definition": "mean of per-episode average coverage (%)",
+    "n": 1,
+    "unit": "",
+    "nd": 1,
+    "source": "",
+    "text": "100.0"
+  },
+  "cond_s1_peaceful_llm_avg_sd": {
+    "value": 0.0,
+    "definition": "sample SD of per-episode average coverage (%)",
+    "n": 1,
+    "unit": "",
+    "nd": 1,
+    "source": "",
+    "text": "0.0"
+  },
+  "cond_s1_peaceful_llm_avg_ci_lo": {
+    "value": 100.0,
+    "definition": "bootstrap 95% CI lower, average coverage (%)",
+    "n": 1,
+    "unit": "",
+    "nd": 1,
+    "source": "",
+    "text": "100.0"
+  },
+  "cond_s1_peaceful_llm_avg_ci_hi": {
+    "value": 100.0,
+    "definition": "bootstrap 95% CI upper, average coverage (%)",
+    "n": 1,
+    "unit": "",
+    "nd": 1,
+    "source": "",
+    "text": "100.0"
+  },
+  "cond_s1_peaceful_llm_final_mean": {
+    "value": 100.0,
+    "definition": "mean final coverage (%)",
+    "n": 1,
+    "unit": "",
+    "nd": 1,
+    "source": "",
+    "text": "100.0"
+  },
+  "cond_s1_peaceful_llm_final_sd": {
+    "value": 0.0,
+    "definition": "sample SD final coverage (%)",
+    "n": 1,
+    "unit": "",
+    "nd": 1,
+    "source": "",
+    "text": "0.0"
+  },
+  "cond_s1_peaceful_llm_bs_mean": {
+    "value": 1.0,
+    "definition": "mean BS deployed",
+    "n": 1,
+    "unit": "",
+    "nd": 1,
+    "source": "",
+    "text": "1.0"
+  },
+  "cond_s1_peaceful_llm_bs_sd": {
+    "value": 0.0,
+    "definition": "sample SD BS deployed",
+    "n": 1,
+    "unit": "",
+    "nd": 1,
+    "source": "",
+    "text": "0.0"
+  },
+  "cond_s1_peaceful_llm_bs_median": {
+    "value": 1,
+    "definition": "median BS deployed",
+    "n": 1,
+    "unit": "",
+    "nd": 0,
+    "source": "",
+    "text": "1"
+  },
+  "cond_s1_peaceful_rule_n": {
+    "value": 23,
+    "definition": "episodes",
+    "n": null,
+    "unit": "",
+    "nd": 0,
+    "source": "",
+    "text": "23"
+  },
+  "cond_s1_peaceful_rule_avg_mean": {
+    "value": 90.15859213250518,
+    "definition": "mean of per-episode average coverage (%)",
+    "n": 23,
+    "unit": "",
+    "nd": 1,
+    "source": "",
+    "text": "90.2"
+  },
+  "cond_s1_peaceful_rule_avg_sd": {
+    "value": 10.932177717973413,
+    "definition": "sample SD of per-episode average coverage (%)",
+    "n": 23,
+    "unit": "",
+    "nd": 1,
+    "source": "",
+    "text": "10.9"
+  },
+  "cond_s1_peaceful_rule_avg_ci_lo": {
+    "value": 85.41447204968942,
+    "definition": "bootstrap 95% CI lower, average coverage (%)",
+    "n": 23,
+    "unit": "",
+    "nd": 1,
+    "source": "",
+    "text": "85.4"
+  },
+  "cond_s1_peaceful_rule_avg_ci_hi": {
+    "value": 93.95571428571428,
+    "definition": "bootstrap 95% CI upper, average coverage (%)",
+    "n": 23,
+    "unit": "",
+    "nd": 1,
+    "source": "",
+    "text": "94.0"
+  },
+  "cond_s1_peaceful_rule_final_mean": {
+    "value": 78.52173913043478,
+    "definition": "mean final coverage (%)",
+    "n": 23,
+    "unit": "",
+    "nd": 1,
+    "source": "",
+    "text": "78.5"
+  },
+  "cond_s1_peaceful_rule_final_sd": {
+    "value": 19.385724750719845,
+    "definition": "sample SD final coverage (%)",
+    "n": 23,
+    "unit": "",
+    "nd": 1,
+    "source": "",
+    "text": "19.4"
+  },
+  "cond_s1_peaceful_rule_bs_mean": {
+    "value": 2.130434782608696,
+    "definition": "mean BS deployed",
+    "n": 23,
+    "unit": "",
+    "nd": 1,
+    "source": "",
+    "text": "2.1"
+  },
+  "cond_s1_peaceful_rule_bs_sd": {
+    "value": 2.6509749120257107,
+    "definition": "sample SD BS deployed",
+    "n": 23,
+    "unit": "",
+    "nd": 1,
+    "source": "",
+    "text": "2.7"
+  },
+  "cond_s1_peaceful_rule_bs_median": {
+    "value": 2,
+    "definition": "median BS deployed",
+    "n": 23,
+    "unit": "",
+    "nd": 0,
+    "source": "",
+    "text": "2"
+  },
+  "power_6pp_sd9_n5": {
+    "value": 0.15387152937893397,
+    "definition": "power to detect 6 pp at SD 9 with n=5/arm (alpha 0.05)",
+    "n": null,
+    "unit": "",
+    "nd": 2,
+    "source": "",
+    "text": "0.15"
+  },
+  "power_6pp_sd9_n10": {
+    "value": 0.29210998221177575,
+    "definition": "power to detect 6 pp at SD 9 with n=10/arm (alpha 0.05)",
+    "n": null,
+    "unit": "",
+    "nd": 2,
+    "source": "",
+    "text": "0.29"
+  },
+  "power_6pp_sd9_n20": {
+    "value": 0.5377868464197425,
+    "definition": "power to detect 6 pp at SD 9 with n=20/arm (alpha 0.05)",
+    "n": null,
+    "unit": "",
+    "nd": 2,
+    "source": "",
+    "text": "0.54"
+  },
+  "power_6pp_sd9_n30": {
+    "value": 0.7187328029806955,
+    "definition": "power to detect 6 pp at SD 9 with n=30/arm (alpha 0.05)",
+    "n": null,
+    "unit": "",
+    "nd": 2,
+    "source": "",
+    "text": "0.72"
+  },
+  "regret_s1_peaceful_llm_events": {
+    "value": 0,
+    "definition": "number of coverage-drop events (>= 5 pp between consecutive epochs)",
+    "n": 1,
+    "unit": "",
+    "nd": 0,
+    "source": "regret",
+    "text": "0"
+  },
+  "regret_s1_peaceful_llm_legacy_text_mean": {
+    "value": null,
+    "definition": "mean legacy-text regret per event (pp; regret_analysis.py port)",
+    "n": 0,
+    "unit": "",
+    "nd": 1,
+    "source": "regret",
+    "text": "n/a"
+  },
+  "regret_s1_peaceful_llm_legacy_fig_mean": {
+    "value": null,
+    "definition": "mean legacy-fig regret per event (pp; generate_figures.py port)",
+    "n": 0,
+    "unit": "",
+    "nd": 1,
+    "source": "regret",
+    "text": "n/a"
+  },
+  "regret_s1_peaceful_llm_v2_mean": {
+    "value": null,
+    "definition": "mean geometric-v2 regret per event (pp)",
+    "n": 0,
+    "unit": "",
+    "nd": 1,
+    "source": "regret",
+    "text": "n/a"
+  },
+  "regret_s1_peaceful_llm_v2_cum_per_episode": {
+    "value": 0.0,
+    "definition": "mean cumulative geometric-v2 regret per episode (pp; 0 if no event)",
+    "n": 1,
+    "unit": "",
+    "nd": 1,
+    "source": "regret",
+    "text": "0.0"
+  },
+  "regret_s1_peaceful_rule_events": {
+    "value": 35,
+    "definition": "number of coverage-drop events (>= 5 pp between consecutive epochs)",
+    "n": 23,
+    "unit": "",
+    "nd": 0,
+    "source": "regret",
+    "text": "35"
+  },
+  "regret_s1_peaceful_rule_legacy_text_mean": {
+    "value": 4.120563082767032,
+    "definition": "mean legacy-text regret per event (pp; regret_analysis.py port)",
+    "n": 30,
+    "unit": "",
+    "nd": 1,
+    "source": "regret",
+    "text": "4.1"
+  },
+  "regret_s1_peaceful_rule_legacy_fig_mean": {
+    "value": 4.417387624531117,
+    "definition": "mean legacy-fig regret per event (pp; generate_figures.py port)",
+    "n": 35,
+    "unit": "",
+    "nd": 1,
+    "source": "regret",
+    "text": "4.4"
+  },
+  "regret_s1_peaceful_rule_v2_mean": {
+    "value": 18.189360336582613,
+    "definition": "mean geometric-v2 regret per event (pp)",
+    "n": 35,
+    "unit": "",
+    "nd": 1,
+    "source": "regret",
+    "text": "18.2"
+  },
+  "regret_s1_peaceful_rule_v2_cum_per_episode": {
+    "value": 27.679461381756152,
+    "definition": "mean cumulative geometric-v2 regret per episode (pp; 0 if no event)",
+    "n": 23,
+    "unit": "",
+    "nd": 1,
+    "source": "regret",
+    "text": "27.7"
+  },
+  "regret_validation_legacy_n": {
+    "value": 2,
+    "definition": "branches with exact and estimated gain",
+    "n": null,
+    "unit": "",
+    "nd": 0,
+    "source": "regret",
+    "text": "2"
+  },
+  "regret_validation_legacy_bias": {
+    "value": 0.0,
+    "definition": "mean(estimated - exact gain) at k0+2, pp",
+    "n": null,
+    "unit": "",
+    "nd": 1,
+    "source": "regret",
+    "text": "0.0"
+  },
+  "regret_validation_legacy_mae": {
+    "value": 0.0,
+    "definition": "mean |estimated - exact| at k0+2, pp",
+    "n": null,
+    "unit": "",
+    "nd": 1,
+    "source": "regret",
+    "text": "0.0"
+  },
+  "regret_validation_legacy_rho": {
+    "value": null,
+    "definition": "Spearman rho estimated vs exact gain",
+    "n": null,
+    "unit": "",
+    "nd": 2,
+    "source": "regret",
+    "text": "n/a"
+  },
+  "regret_validation_v2_n": {
+    "value": 2,
+    "definition": "branches with exact and estimated gain",
+    "n": null,
+    "unit": "",
+    "nd": 0,
+    "source": "regret",
+    "text": "2"
+  },
+  "regret_validation_v2_bias": {
+    "value": 0.0,
+    "definition": "mean(estimated - exact gain) at k0+2, pp",
+    "n": null,
+    "unit": "",
+    "nd": 1,
+    "source": "regret",
+    "text": "0.0"
+  },
+  "regret_validation_v2_mae": {
+    "value": 0.0,
+    "definition": "mean |estimated - exact| at k0+2, pp",
+    "n": null,
+    "unit": "",
+    "nd": 1,
+    "source": "regret",
+    "text": "0.0"
+  },
+  "regret_validation_v2_rho": {
+    "value": null,
+    "definition": "Spearman rho estimated vs exact gain",
+    "n": null,
+    "unit": "",
+    "nd": 2,
+    "source": "regret",
+    "text": "n/a"
+  },
+  "reasoning_s1_peaceful_llm_decisions": {
+    "value": 2,
+    "definition": "LLM decisions in the arm",
+    "n": null,
+    "unit": "",
+    "nd": 0,
+    "source": "reasoning",
+    "text": "2"
+  },
+  "reasoning_s1_peaceful_llm_nonempty_pct": {
+    "value": 100.0,
+    "definition": "share of decisions with non-empty reasoning text (%)",
+    "n": 2,
+    "unit": "",
+    "nd": 1,
+    "source": "reasoning",
+    "text": "100.0"
+  },
+  "reasoning_s1_peaceful_llm_valid_pct": {
+    "value": 100.0,
+    "definition": "share of decisions with valid reasoning (non-empty, not error, >=1 category) (%)",
+    "n": 2,
+    "unit": "",
+    "nd": 1,
+    "source": "reasoning",
+    "text": "100.0"
+  },
+  "reasoning_all_decisions": {
+    "value": 2,
+    "definition": "all LLM decisions analysed",
+    "n": null,
+    "unit": "",
+    "nd": 0,
+    "source": "reasoning",
+    "text": "2"
+  },
+  "reasoning_all_nonempty": {
+    "value": 2,
+    "definition": "LLM decisions with non-empty reasoning",
+    "n": null,
+    "unit": "",
+    "nd": 0,
+    "source": "reasoning",
+    "text": "2"
+  },
+  "reasoning_all_valid": {
+    "value": 2,
+    "definition": "LLM decisions with valid reasoning",
+    "n": null,
+    "unit": "",
+    "nd": 0,
+    "source": "reasoning",
+    "text": "2"
+  },
+  "reasoning_all_valid_pct": {
+    "value": 100.0,
+    "definition": "share of all LLM decisions with valid reasoning (%)",
+    "n": 2,
+    "unit": "",
+    "nd": 1,
+    "source": "reasoning",
+    "text": "100.0"
+  },
+  "reasoning_cat_spatial_count": {
+    "value": 1,
+    "definition": "decisions labelled 'spatial' (multi-label)",
+    "n": null,
+    "unit": "",
+    "nd": 0,
+    "source": "reasoning",
+    "text": "1"
+  },
+  "reasoning_cat_spatial_pct_dec": {
+    "value": 50.0,
+    "definition": "share of all LLM decisions labelled 'spatial' (%)",
+    "n": 2,
+    "unit": "",
+    "nd": 1,
+    "source": "reasoning",
+    "text": "50.0"
+  },
+  "reasoning_cat_spatial_pct_nonempty": {
+    "value": 50.0,
+    "definition": "share of non-empty-reasoning decisions labelled 'spatial' (%)",
+    "n": 2,
+    "unit": "",
+    "nd": 1,
+    "source": "reasoning",
+    "text": "50.0"
+  },
+  "reasoning_cat_reactive_count": {
+    "value": 2,
+    "definition": "decisions labelled 'reactive' (multi-label)",
+    "n": null,
+    "unit": "",
+    "nd": 0,
+    "source": "reasoning",
+    "text": "2"
+  },
+  "reasoning_cat_reactive_pct_dec": {
+    "value": 100.0,
+    "definition": "share of all LLM decisions labelled 'reactive' (%)",
+    "n": 2,
+    "unit": "",
+    "nd": 1,
+    "source": "reasoning",
+    "text": "100.0"
+  },
+  "reasoning_cat_reactive_pct_nonempty": {
+    "value": 100.0,
+    "definition": "share of non-empty-reasoning decisions labelled 'reactive' (%)",
+    "n": 2,
+    "unit": "",
+    "nd": 1,
+    "source": "reasoning",
+    "text": "100.0"
+  },
+  "reasoning_cat_temporal_count": {
+    "value": 0,
+    "definition": "decisions labelled 'temporal' (multi-label)",
+    "n": null,
+    "unit": "",
+    "nd": 0,
+    "source": "reasoning",
+    "text": "0"
+  },
+  "reasoning_cat_temporal_pct_dec": {
+    "value": 0.0,
+    "definition": "share of all LLM decisions labelled 'temporal' (%)",
+    "n": 2,
+    "unit": "",
+    "nd": 1,
+    "source": "reasoning",
+    "text": "0.0"
+  },
+  "reasoning_cat_temporal_pct_nonempty": {
+    "value": 0.0,
+    "definition": "share of non-empty-reasoning decisions labelled 'temporal' (%)",
+    "n": 2,
+    "unit": "",
+    "nd": 1,
+    "source": "reasoning",
+    "text": "0.0"
+  },
+  "reasoning_cat_resource_count": {
+    "value": 0,
+    "definition": "decisions labelled 'resource' (multi-label)",
+    "n": null,
+    "unit": "",
+    "nd": 0,
+    "source": "reasoning",
+    "text": "0"
+  },
+  "reasoning_cat_resource_pct_dec": {
+    "value": 0.0,
+    "definition": "share of all LLM decisions labelled 'resource' (%)",
+    "n": 2,
+    "unit": "",
+    "nd": 1,
+    "source": "reasoning",
+    "text": "0.0"
+  },
+  "reasoning_cat_resource_pct_nonempty": {
+    "value": 0.0,
+    "definition": "share of non-empty-reasoning decisions labelled 'resource' (%)",
+    "n": 2,
+    "unit": "",
+    "nd": 1,
+    "source": "reasoning",
+    "text": "0.0"
+  },
+  "reasoning_cat_capacity_count": {
+    "value": 2,
+    "definition": "decisions labelled 'capacity' (multi-label)",
+    "n": null,
+    "unit": "",
+    "nd": 0,
+    "source": "reasoning",
+    "text": "2"
+  },
+  "reasoning_cat_capacity_pct_dec": {
+    "value": 100.0,
+    "definition": "share of all LLM decisions labelled 'capacity' (%)",
+    "n": 2,
+    "unit": "",
+    "nd": 1,
+    "source": "reasoning",
+    "text": "100.0"
+  },
+  "reasoning_cat_capacity_pct_nonempty": {
+    "value": 100.0,
+    "definition": "share of non-empty-reasoning decisions labelled 'capacity' (%)",
+    "n": 2,
+    "unit": "",
+    "nd": 1,
+    "source": "reasoning",
+    "text": "100.0"
+  },
+  "reasoning_cat_noop_justified_count": {
+    "value": 2,
+    "definition": "decisions labelled 'noop_justified' (multi-label)",
+    "n": null,
+    "unit": "",
+    "nd": 0,
+    "source": "reasoning",
+    "text": "2"
+  },
+  "reasoning_cat_noop_justified_pct_dec": {
+    "value": 100.0,
+    "definition": "share of all LLM decisions labelled 'noop_justified' (%)",
+    "n": 2,
+    "unit": "",
+    "nd": 1,
+    "source": "reasoning",
+    "text": "100.0"
+  },
+  "reasoning_cat_noop_justified_pct_nonempty": {
+    "value": 100.0,
+    "definition": "share of non-empty-reasoning decisions labelled 'noop_justified' (%)",
+    "n": 2,
+    "unit": "",
+    "nd": 1,
+    "source": "reasoning",
+    "text": "100.0"
+  },
+  "reasoning_cat_threat_count": {
+    "value": 2,
+    "definition": "decisions labelled 'threat' (multi-label)",
+    "n": null,
+    "unit": "",
+    "nd": 0,
+    "source": "reasoning",
+    "text": "2"
+  },
+  "reasoning_cat_threat_pct_dec": {
+    "value": 100.0,
+    "definition": "share of all LLM decisions labelled 'threat' (%)",
+    "n": 2,
+    "unit": "",
+    "nd": 1,
+    "source": "reasoning",
+    "text": "100.0"
+  },
+  "reasoning_cat_threat_pct_nonempty": {
+    "value": 100.0,
+    "definition": "share of non-empty-reasoning decisions labelled 'threat' (%)",
+    "n": 2,
+    "unit": "",
+    "nd": 1,
+    "source": "reasoning",
+    "text": "100.0"
+  },
+  "reasoning_cat_uncategorized_count": {
+    "value": 0,
+    "definition": "decisions labelled 'uncategorized' (multi-label)",
+    "n": null,
+    "unit": "",
+    "nd": 0,
+    "source": "reasoning",
+    "text": "0"
+  },
+  "reasoning_cat_uncategorized_pct_dec": {
+    "value": 0.0,
+    "definition": "share of all LLM decisions labelled 'uncategorized' (%)",
+    "n": 2,
+    "unit": "",
+    "nd": 1,
+    "source": "reasoning",
+    "text": "0.0"
+  },
+  "reasoning_cat_uncategorized_pct_nonempty": {
+    "value": 0.0,
+    "definition": "share of non-empty-reasoning decisions labelled 'uncategorized' (%)",
+    "n": 2,
+    "unit": "",
+    "nd": 1,
+    "source": "reasoning",
+    "text": "0.0"
+  },
+  "latency_v2_llm_gemma4:latest_n": {
+    "value": 2,
+    "definition": "decisions with a latency value",
+    "n": null,
+    "unit": "",
+    "nd": 0,
+    "source": "latency_invalid",
+    "text": "2"
+  },
+  "latency_v2_llm_gemma4:latest_median": {
+    "value": 113.76308715343475,
+    "definition": "median decision latency (s), source=logged (latency_s)",
+    "n": 2,
+    "unit": "",
+    "nd": 1,
+    "source": "latency_invalid",
+    "text": "113.8"
+  },
+  "latency_v2_llm_gemma4:latest_mean": {
+    "value": 113.76308715343475,
+    "definition": "mean decision latency (s)",
+    "n": 2,
+    "unit": "",
+    "nd": 1,
+    "source": "latency_invalid",
+    "text": "113.8"
+  },
+  "latency_v2_llm_gemma4:latest_p90": {
+    "value": 184.68556859493256,
+    "definition": "90th percentile latency (s)",
+    "n": 2,
+    "unit": "",
+    "nd": 1,
+    "source": "latency_invalid",
+    "text": "184.7"
+  },
+  "latency_v2_llm_gemma4:latest_p99": {
+    "value": 200.64312691926955,
+    "definition": "99th percentile latency (s)",
+    "n": 2,
+    "unit": "",
+    "nd": 1,
+    "source": "latency_invalid",
+    "text": "200.6"
+  },
+  "latency_v2_llm_gemma4:latest_max": {
+    "value": 202.416188955307,
+    "definition": "maximum latency (s)",
+    "n": 2,
+    "unit": "",
+    "nd": 1,
+    "source": "latency_invalid",
+    "text": "202.4"
+  },
+  "latency_v2_llm_gemma4:latest_over_interval": {
+    "value": 1,
+    "definition": "decisions with latency > 60 s decision interval",
+    "n": null,
+    "unit": "",
+    "nd": 0,
+    "source": "latency_invalid",
+    "text": "1"
+  },
+  "invalid_v2_llm_gemma4:latest_rate_pct": {
+    "value": 0.0,
+    "definition": "invalid-output rate (%): fallback_noop+api_error+timeout over decisions",
+    "n": 2,
+    "unit": "",
+    "nd": 1,
+    "source": "latency_invalid",
+    "text": "0.0"
+  },
+  "invalid_v2_llm_gemma4:latest_extracted_pct": {
+    "value": 0.0,
+    "definition": "share of decisions whose action was regex-extracted (%)",
+    "n": 2,
+    "unit": "",
+    "nd": 1,
+    "source": "latency_invalid",
+    "text": "0.0"
+  },
+  "invalid_v2_llm_gemma4:latest_syntax": {
+    "value": 0,
+    "definition": "actions violating the bridge grammar",
+    "n": null,
+    "unit": "",
+    "nd": 0,
+    "source": "latency_invalid",
+    "text": "0"
+  },
+  "runtime_v2_llm_gemma4:latest_wall_s": {
+    "value": 362.0,
+    "definition": "mean episode wall-clock (s)",
+    "n": 1,
+    "unit": "",
+    "nd": 0,
+    "source": "latency_invalid",
+    "text": "362"
+  },
+  "runtime_v2_llm_gemma4:latest_peak_rss_mb": {
+    "value": 5833.0,
+    "definition": "mean engine peak RSS (MB)",
+    "n": 1,
+    "unit": "",
+    "nd": 0,
+    "source": "latency_invalid",
+    "text": "5833"
+  },
+  "latency_v2_rule_-_n": {
+    "value": 134,
+    "definition": "decisions with a latency value",
+    "n": null,
+    "unit": "",
+    "nd": 0,
+    "source": "latency_invalid",
+    "text": "134"
+  },
+  "latency_v2_rule_-_median": {
+    "value": 0.00017261505126953125,
+    "definition": "median decision latency (s), source=logged (decision_wall_s)",
+    "n": 134,
+    "unit": "",
+    "nd": 1,
+    "source": "latency_invalid",
+    "text": "0.0"
+  },
+  "latency_v2_rule_-_mean": {
+    "value": 0.00025172909693931466,
+    "definition": "mean decision latency (s)",
+    "n": 134,
+    "unit": "",
+    "nd": 1,
+    "source": "latency_invalid",
+    "text": "0.0"
+  },
+  "latency_v2_rule_-_p90": {
+    "value": 0.00021245479583740235,
+    "definition": "90th percentile latency (s)",
+    "n": 134,
+    "unit": "",
+    "nd": 1,
+    "source": "latency_invalid",
+    "text": "0.0"
+  },
+  "latency_v2_rule_-_p99": {
+    "value": 0.0036571526527404605,
+    "definition": "99th percentile latency (s)",
+    "n": 134,
+    "unit": "",
+    "nd": 1,
+    "source": "latency_invalid",
+    "text": "0.0"
+  },
+  "latency_v2_rule_-_max": {
+    "value": 0.004254579544067383,
+    "definition": "maximum latency (s)",
+    "n": 134,
+    "unit": "",
+    "nd": 1,
+    "source": "latency_invalid",
+    "text": "0.0"
+  },
+  "latency_v2_rule_-_over_interval": {
+    "value": 0,
+    "definition": "decisions with latency > 60 s decision interval",
+    "n": null,
+    "unit": "",
+    "nd": 0,
+    "source": "latency_invalid",
+    "text": "0"
+  },
+  "invalid_v2_rule_-_syntax": {
+    "value": 0,
+    "definition": "actions violating the bridge grammar",
+    "n": null,
+    "unit": "",
+    "nd": 0,
+    "source": "latency_invalid",
+    "text": "0"
+  },
+  "runtime_v2_rule_-_wall_s": {
+    "value": 130.0,
+    "definition": "mean episode wall-clock (s)",
+    "n": 19,
+    "unit": "",
+    "nd": 0,
+    "source": "latency_invalid",
+    "text": "130"
+  },
+  "runtime_v2_rule_-_peak_rss_mb": {
+    "value": 5876.705882352941,
+    "definition": "mean engine peak RSS (MB)",
+    "n": 17,
+    "unit": "",
+    "nd": 0,
+    "source": "latency_invalid",
+    "text": "5877"
+  },
+  "validation_v2_llm_gemma4:latest_executed_place": {
+    "value": 0,
+    "definition": "bridge validation outcome 'executed_place' count",
+    "n": null,
+    "unit": "",
+    "nd": 0,
+    "source": "latency_invalid",
+    "text": "0"
+  },
+  "validation_v2_llm_gemma4:latest_noop": {
+    "value": 2,
+    "definition": "bridge validation outcome 'noop' count",
+    "n": null,
+    "unit": "",
+    "nd": 0,
+    "source": "latency_invalid",
+    "text": "2"
+  },
+  "validation_v2_llm_gemma4:latest_skipped_invalid_position": {
+    "value": 0,
+    "definition": "bridge validation outcome 'skipped_invalid_position' count",
+    "n": null,
+    "unit": "",
+    "nd": 0,
+    "source": "latency_invalid",
+    "text": "0"
+  },
+  "validation_v2_llm_gemma4:latest_skipped_water": {
+    "value": 0,
+    "definition": "bridge validation outcome 'skipped_water' count",
+    "n": null,
+    "unit": "",
+    "nd": 0,
+    "source": "latency_invalid",
+    "text": "0"
+  },
+  "validation_v2_rule_-_executed_place": {
+    "value": 14,
+    "definition": "bridge validation outcome 'executed_place' count",
+    "n": null,
+    "unit": "",
+    "nd": 0,
+    "source": "latency_invalid",
+    "text": "14"
+  },
+  "validation_v2_rule_-_noop": {
+    "value": 74,
+    "definition": "bridge validation outcome 'noop' count",
+    "n": null,
+    "unit": "",
+    "nd": 0,
+    "source": "latency_invalid",
+    "text": "74"
+  },
+  "validation_v2_rule_-_skipped_invalid_position": {
+    "value": 2,
+    "definition": "bridge validation outcome 'skipped_invalid_position' count",
+    "n": null,
+    "unit": "",
+    "nd": 0,
+    "source": "latency_invalid",
+    "text": "2"
+  },
+  "validation_v2_rule_-_skipped_water": {
+    "value": 5,
+    "definition": "bridge validation outcome 'skipped_water' count",
+    "n": null,
+    "unit": "",
+    "nd": 0,
+    "source": "latency_invalid",
+    "text": "5"
+  },
+  "thr_s1_peaceful_llm_n": {
+    "value": 1,
+    "definition": "episodes",
+    "n": null,
+    "unit": "",
+    "nd": 0,
+    "source": "threshold_metrics",
+    "text": "1"
+  },
+  "thr_s1_peaceful_llm_frac_ge_mean": {
+    "value": 100.0,
+    "definition": "share of epochs with coverage >= threshold (%) (group mean)",
+    "n": 1,
+    "unit": "",
+    "nd": 1,
+    "source": "threshold_metrics",
+    "text": "100.0"
+  },
+  "thr_s1_peaceful_llm_frac_ge_sd": {
+    "value": 0.0,
+    "definition": "share of epochs with coverage >= threshold (%) (sample SD)",
+    "n": 1,
+    "unit": "",
+    "nd": 1,
+    "source": "threshold_metrics",
+    "text": "0.0"
+  },
+  "thr_s1_peaceful_llm_frac_ge_ci_lo": {
+    "value": 100.0,
+    "definition": "share of epochs with coverage >= threshold (%) (bootstrap CI lower)",
+    "n": 1,
+    "unit": "",
+    "nd": 1,
+    "source": "threshold_metrics",
+    "text": "100.0"
+  },
+  "thr_s1_peaceful_llm_frac_ge_ci_hi": {
+    "value": 100.0,
+    "definition": "share of epochs with coverage >= threshold (%) (bootstrap CI upper)",
+    "n": 1,
+    "unit": "",
+    "nd": 1,
+    "source": "threshold_metrics",
+    "text": "100.0"
+  },
+  "thr_s1_peaceful_llm_area_below_mean": {
+    "value": 0.0,
+    "definition": "sum over epochs of max(0, thr - coverage) (pp-epochs) (group mean)",
+    "n": 1,
+    "unit": "",
+    "nd": 1,
+    "source": "threshold_metrics",
+    "text": "0.0"
+  },
+  "thr_s1_peaceful_llm_area_below_sd": {
+    "value": 0.0,
+    "definition": "sum over epochs of max(0, thr - coverage) (pp-epochs) (sample SD)",
+    "n": 1,
+    "unit": "",
+    "nd": 1,
+    "source": "threshold_metrics",
+    "text": "0.0"
+  },
+  "thr_s1_peaceful_llm_area_below_ci_lo": {
+    "value": 0.0,
+    "definition": "sum over epochs of max(0, thr - coverage) (pp-epochs) (bootstrap CI lower)",
+    "n": 1,
+    "unit": "",
+    "nd": 1,
+    "source": "threshold_metrics",
+    "text": "0.0"
+  },
+  "thr_s1_peaceful_llm_area_below_ci_hi": {
+    "value": 0.0,
+    "definition": "sum over epochs of max(0, thr - coverage) (pp-epochs) (bootstrap CI upper)",
+    "n": 1,
+    "unit": "",
+    "nd": 1,
+    "source": "threshold_metrics",
+    "text": "0.0"
+  },
+  "thr_s1_peaceful_llm_final_cov_mean": {
+    "value": 100.0,
+    "definition": "coverage at the last decision epoch (%) (group mean)",
+    "n": 1,
+    "unit": "",
+    "nd": 1,
+    "source": "threshold_metrics",
+    "text": "100.0"
+  },
+  "thr_s1_peaceful_llm_final_cov_sd": {
+    "value": 0.0,
+    "definition": "coverage at the last decision epoch (%) (sample SD)",
+    "n": 1,
+    "unit": "",
+    "nd": 1,
+    "source": "threshold_metrics",
+    "text": "0.0"
+  },
+  "thr_s1_peaceful_llm_final_cov_ci_lo": {
+    "value": 100,
+    "definition": "coverage at the last decision epoch (%) (bootstrap CI lower)",
+    "n": 1,
+    "unit": "",
+    "nd": 1,
+    "source": "threshold_metrics",
+    "text": "100"
+  },
+  "thr_s1_peaceful_llm_final_cov_ci_hi": {
+    "value": 100,
+    "definition": "coverage at the last decision epoch (%) (bootstrap CI upper)",
+    "n": 1,
+    "unit": "",
+    "nd": 1,
+    "source": "threshold_metrics",
+    "text": "100"
+  },
+  "thr_s1_peaceful_llm_bs_deployed_mean": {
+    "value": 1.0,
+    "definition": "base stations at the last decision epoch (group mean)",
+    "n": 1,
+    "unit": "",
+    "nd": 1,
+    "source": "threshold_metrics",
+    "text": "1.0"
+  },
+  "thr_s1_peaceful_llm_bs_deployed_sd": {
+    "value": 0.0,
+    "definition": "base stations at the last decision epoch (sample SD)",
+    "n": 1,
+    "unit": "",
+    "nd": 1,
+    "source": "threshold_metrics",
+    "text": "0.0"
+  },
+  "thr_s1_peaceful_llm_bs_deployed_ci_lo": {
+    "value": 1,
+    "definition": "base stations at the last decision epoch (bootstrap CI lower)",
+    "n": 1,
+    "unit": "",
+    "nd": 1,
+    "source": "threshold_metrics",
+    "text": "1"
+  },
+  "thr_s1_peaceful_llm_bs_deployed_ci_hi": {
+    "value": 1,
+    "definition": "base stations at the last decision epoch (bootstrap CI upper)",
+    "n": 1,
+    "unit": "",
+    "nd": 1,
+    "source": "threshold_metrics",
+    "text": "1"
+  },
+  "thr_s1_peaceful_llm_first_viol_mean": {
+    "value": null,
+    "definition": "mean epoch of first coverage < threshold over violating episodes",
+    "n": 0,
+    "unit": "",
+    "nd": 1,
+    "source": "threshold_metrics",
+    "text": "n/a"
+  },
+  "thr_s1_peaceful_llm_never_viol": {
+    "value": 1,
+    "definition": "episodes never below threshold",
+    "n": null,
+    "unit": "",
+    "nd": 0,
+    "source": "threshold_metrics",
+    "text": "1"
+  },
+  "thr_s1_peaceful_llm_never_viol_pct": {
+    "value": 100.0,
+    "definition": "share of episodes never below threshold (%)",
+    "n": 1,
+    "unit": "",
+    "nd": 1,
+    "source": "threshold_metrics",
+    "text": "100.0"
+  },
+  "thr_s1_peaceful_rule_n": {
+    "value": 23,
+    "definition": "episodes",
+    "n": null,
+    "unit": "",
+    "nd": 0,
+    "source": "threshold_metrics",
+    "text": "23"
+  },
+  "thr_s1_peaceful_rule_frac_ge_mean": {
+    "value": 83.23936932632584,
+    "definition": "share of epochs with coverage >= threshold (%) (group mean)",
+    "n": 23,
+    "unit": "",
+    "nd": 1,
+    "source": "threshold_metrics",
+    "text": "83.2"
+  },
+  "thr_s1_peaceful_rule_frac_ge_sd": {
+    "value": 18.42966391027075,
+    "definition": "share of epochs with coverage >= threshold (%) (sample SD)",
+    "n": 23,
+    "unit": "",
+    "nd": 1,
+    "source": "threshold_metrics",
+    "text": "18.4"
+  },
+  "thr_s1_peaceful_rule_frac_ge_ci_lo": {
+    "value": 75.54706163401816,
+    "definition": "share of epochs with coverage >= threshold (%) (bootstrap CI lower)",
+    "n": 23,
+    "unit": "",
+    "nd": 1,
+    "source": "threshold_metrics",
+    "text": "75.5"
+  },
+  "thr_s1_peaceful_rule_frac_ge_ci_hi": {
+    "value": 90.06211180124224,
+    "definition": "share of epochs with coverage >= threshold (%) (bootstrap CI upper)",
+    "n": 23,
+    "unit": "",
+    "nd": 1,
+    "source": "threshold_metrics",
+    "text": "90.1"
+  },
+  "thr_s1_peaceful_rule_area_below_mean": {
+    "value": 52.869565217391305,
+    "definition": "sum over epochs of max(0, thr - coverage) (pp-epochs) (group mean)",
+    "n": 23,
+    "unit": "",
+    "nd": 1,
+    "source": "threshold_metrics",
+    "text": "52.9"
+  },
+  "thr_s1_peaceful_rule_area_below_sd": {
+    "value": 190.96770415863662,
+    "definition": "sum over epochs of max(0, thr - coverage) (pp-epochs) (sample SD)",
+    "n": 23,
+    "unit": "",
+    "nd": 1,
+    "source": "threshold_metrics",
+    "text": "191.0"
+  },
+  "thr_s1_peaceful_rule_area_below_ci_lo": {
+    "value": 8.478260869565217,
+    "definition": "sum over epochs of max(0, thr - coverage) (pp-epochs) (bootstrap CI lower)",
+    "n": 23,
+    "unit": "",
+    "nd": 1,
+    "source": "threshold_metrics",
+    "text": "8.5"
+  },
+  "thr_s1_peaceful_rule_area_below_ci_hi": {
+    "value": 135.2173913043478,
+    "definition": "sum over epochs of max(0, thr - coverage) (pp-epochs) (bootstrap CI upper)",
+    "n": 23,
+    "unit": "",
+    "nd": 1,
+    "source": "threshold_metrics",
+    "text": "135.2"
+  },
+  "thr_s1_peaceful_rule_final_cov_mean": {
+    "value": 78.52173913043478,
+    "definition": "coverage at the last decision epoch (%) (group mean)",
+    "n": 23,
+    "unit": "",
+    "nd": 1,
+    "source": "threshold_metrics",
+    "text": "78.5"
+  },
+  "thr_s1_peaceful_rule_final_cov_sd": {
+    "value": 19.385724750719845,
+    "definition": "coverage at the last decision epoch (%) (sample SD)",
+    "n": 23,
+    "unit": "",
+    "nd": 1,
+    "source": "threshold_metrics",
+    "text": "19.4"
+  },
+  "thr_s1_peaceful_rule_final_cov_ci_lo": {
+    "value": 70.0858695652174,
+    "definition": "coverage at the last decision epoch (%) (bootstrap CI lower)",
+    "n": 23,
+    "unit": "",
+    "nd": 1,
+    "source": "threshold_metrics",
+    "text": "70.1"
+  },
+  "thr_s1_peaceful_rule_final_cov_ci_hi": {
+    "value": 85.52173913043478,
+    "definition": "coverage at the last decision epoch (%) (bootstrap CI upper)",
+    "n": 23,
+    "unit": "",
+    "nd": 1,
+    "source": "threshold_metrics",
+    "text": "85.5"
+  },
+  "thr_s1_peaceful_rule_bs_deployed_mean": {
+    "value": 2.130434782608696,
+    "definition": "base stations at the last decision epoch (group mean)",
+    "n": 23,
+    "unit": "",
+    "nd": 1,
+    "source": "threshold_metrics",
+    "text": "2.1"
+  },
+  "thr_s1_peaceful_rule_bs_deployed_sd": {
+    "value": 2.6509749120257107,
+    "definition": "base stations at the last decision epoch (sample SD)",
+    "n": 23,
+    "unit": "",
+    "nd": 1,
+    "source": "threshold_metrics",
+    "text": "2.7"
+  },
+  "thr_s1_peaceful_rule_bs_deployed_ci_lo": {
+    "value": 1.391304347826087,
+    "definition": "base stations at the last decision epoch (bootstrap CI lower)",
+    "n": 23,
+    "unit": "",
+    "nd": 1,
+    "source": "threshold_metrics",
+    "text": "1.4"
+  },
+  "thr_s1_peaceful_rule_bs_deployed_ci_hi": {
+    "value": 3.3043478260869565,
+    "definition": "base stations at the last decision epoch (bootstrap CI upper)",
+    "n": 23,
+    "unit": "",
+    "nd": 1,
+    "source": "threshold_metrics",
+    "text": "3.3"
+  },
+  "thr_s1_peaceful_rule_first_viol_mean": {
+    "value": 4.285714285714286,
+    "definition": "mean epoch of first coverage < threshold over violating episodes",
+    "n": 14,
+    "unit": "",
+    "nd": 1,
+    "source": "threshold_metrics",
+    "text": "4.3"
+  },
+  "thr_s1_peaceful_rule_never_viol": {
+    "value": 9,
+    "definition": "episodes never below threshold",
+    "n": null,
+    "unit": "",
+    "nd": 0,
+    "source": "threshold_metrics",
+    "text": "9"
+  },
+  "thr_s1_peaceful_rule_never_viol_pct": {
+    "value": 39.130434782608695,
+    "definition": "share of episodes never below threshold (%)",
+    "n": 23,
+    "unit": "",
+    "nd": 1,
+    "source": "threshold_metrics",
+    "text": "39.1"
+  },
+  "mono_v2_llm_strict_pct": {
+    "value": null,
+    "definition": "monotonicity share variant strict (%)",
+    "n": 0,
+    "unit": "",
+    "nd": 1,
+    "source": "monotonicity",
+    "text": "n/a"
+  },
+  "mono_v2_llm_strict_n": {
+    "value": 0,
+    "definition": "transitions in the denominator of variant strict",
+    "n": null,
+    "unit": "",
+    "nd": 0,
+    "source": "monotonicity",
+    "text": "0"
+  },
+  "mono_v2_llm_demand_adj_pct": {
+    "value": null,
+    "definition": "monotonicity share variant demand_adj (%)",
+    "n": 0,
+    "unit": "",
+    "nd": 1,
+    "source": "monotonicity",
+    "text": "n/a"
+  },
+  "mono_v2_llm_demand_adj_n": {
+    "value": 0,
+    "definition": "transitions in the denominator of variant demand_adj",
+    "n": null,
+    "unit": "",
+    "nd": 0,
+    "source": "monotonicity",
+    "text": "0"
+  },
+  "mono_v2_llm_covered_pct": {
+    "value": null,
+    "definition": "monotonicity share variant covered (%)",
+    "n": 0,
+    "unit": "",
+    "nd": 1,
+    "source": "monotonicity",
+    "text": "n/a"
+  },
+  "mono_v2_llm_covered_n": {
+    "value": 0,
+    "definition": "transitions in the denominator of variant covered",
+    "n": null,
+    "unit": "",
+    "nd": 0,
+    "source": "monotonicity",
+    "text": "0"
+  },
+  "mono_v2_llm_action_pct": {
+    "value": null,
+    "definition": "monotonicity share variant action (%)",
+    "n": 0,
+    "unit": "",
+    "nd": 1,
+    "source": "monotonicity",
+    "text": "n/a"
+  },
+  "mono_v2_llm_action_n": {
+    "value": 0,
+    "definition": "transitions in the denominator of variant action",
+    "n": null,
+    "unit": "",
+    "nd": 0,
+    "source": "monotonicity",
+    "text": "0"
+  },
+  "mono_v2_rule_strict_pct": {
+    "value": 40.90909090909091,
+    "definition": "monotonicity share variant strict (%)",
+    "n": 22,
+    "unit": "",
+    "nd": 1,
+    "source": "monotonicity",
+    "text": "40.9"
+  },
+  "mono_v2_rule_strict_n": {
+    "value": 22,
+    "definition": "transitions in the denominator of variant strict",
+    "n": null,
+    "unit": "",
+    "nd": 0,
+    "source": "monotonicity",
+    "text": "22"
+  },
+  "mono_v2_rule_demand_adj_pct": {
+    "value": 90.9090909090909,
+    "definition": "monotonicity share variant demand_adj (%)",
+    "n": 22,
+    "unit": "",
+    "nd": 1,
+    "source": "monotonicity",
+    "text": "90.9"
+  },
+  "mono_v2_rule_demand_adj_n": {
+    "value": 22,
+    "definition": "transitions in the denominator of variant demand_adj",
+    "n": null,
+    "unit": "",
+    "nd": 0,
+    "source": "monotonicity",
+    "text": "22"
+  },
+  "mono_v2_rule_covered_pct": {
+    "value": 54.54545454545455,
+    "definition": "monotonicity share variant covered (%)",
+    "n": 22,
+    "unit": "",
+    "nd": 1,
+    "source": "monotonicity",
+    "text": "54.5"
+  },
+  "mono_v2_rule_covered_n": {
+    "value": 22,
+    "definition": "transitions in the denominator of variant covered",
+    "n": null,
+    "unit": "",
+    "nd": 0,
+    "source": "monotonicity",
+    "text": "22"
+  },
+  "mono_v2_rule_action_pct": {
+    "value": 46.42857142857143,
+    "definition": "monotonicity share variant action (%)",
+    "n": 28,
+    "unit": "",
+    "nd": 1,
+    "source": "monotonicity",
+    "text": "46.4"
+  },
+  "mono_v2_rule_action_n": {
+    "value": 28,
+    "definition": "transitions in the denominator of variant action",
+    "n": null,
+    "unit": "",
+    "nd": 0,
+    "source": "monotonicity",
+    "text": "28"
+  },
+  "mono_v2_all_strict_pct": {
+    "value": 40.90909090909091,
+    "definition": "monotonicity share variant strict, all agents (%)",
+    "n": 22,
+    "unit": "",
+    "nd": 1,
+    "source": "monotonicity",
+    "text": "40.9"
+  },
+  "mono_v2_all_strict_k": {
+    "value": 9,
+    "definition": "transitions satisfying variant strict, all agents",
+    "n": null,
+    "unit": "",
+    "nd": 0,
+    "source": "monotonicity",
+    "text": "9"
+  },
+  "mono_v2_all_strict_n": {
+    "value": 22,
+    "definition": "transitions in the denominator of variant strict, all agents",
+    "n": null,
+    "unit": "",
+    "nd": 0,
+    "source": "monotonicity",
+    "text": "22"
+  },
+  "mono_v2_all_demand_adj_pct": {
+    "value": 90.9090909090909,
+    "definition": "monotonicity share variant demand_adj, all agents (%)",
+    "n": 22,
+    "unit": "",
+    "nd": 1,
+    "source": "monotonicity",
+    "text": "90.9"
+  },
+  "mono_v2_all_demand_adj_k": {
+    "value": 20,
+    "definition": "transitions satisfying variant demand_adj, all agents",
+    "n": null,
+    "unit": "",
+    "nd": 0,
+    "source": "monotonicity",
+    "text": "20"
+  },
+  "mono_v2_all_demand_adj_n": {
+    "value": 22,
+    "definition": "transitions in the denominator of variant demand_adj, all agents",
+    "n": null,
+    "unit": "",
+    "nd": 0,
+    "source": "monotonicity",
+    "text": "22"
+  },
+  "mono_v2_all_covered_pct": {
+    "value": 54.54545454545455,
+    "definition": "monotonicity share variant covered, all agents (%)",
+    "n": 22,
+    "unit": "",
+    "nd": 1,
+    "source": "monotonicity",
+    "text": "54.5"
+  },
+  "mono_v2_all_covered_k": {
+    "value": 12,
+    "definition": "transitions satisfying variant covered, all agents",
+    "n": null,
+    "unit": "",
+    "nd": 0,
+    "source": "monotonicity",
+    "text": "12"
+  },
+  "mono_v2_all_covered_n": {
+    "value": 22,
+    "definition": "transitions in the denominator of variant covered, all agents",
+    "n": null,
+    "unit": "",
+    "nd": 0,
+    "source": "monotonicity",
+    "text": "22"
+  },
+  "mono_v2_all_action_pct": {
+    "value": 46.42857142857143,
+    "definition": "monotonicity share variant action, all agents (%)",
+    "n": 28,
+    "unit": "",
+    "nd": 1,
+    "source": "monotonicity",
+    "text": "46.4"
+  },
+  "mono_v2_all_action_k": {
+    "value": 13,
+    "definition": "transitions satisfying variant action, all agents",
+    "n": null,
+    "unit": "",
+    "nd": 0,
+    "source": "monotonicity",
+    "text": "13"
+  },
+  "mono_v2_all_action_n": {
+    "value": 28,
+    "definition": "transitions in the denominator of variant action, all agents",
+    "n": null,
+    "unit": "",
+    "nd": 0,
+    "source": "monotonicity",
+    "text": "28"
+  }
+}

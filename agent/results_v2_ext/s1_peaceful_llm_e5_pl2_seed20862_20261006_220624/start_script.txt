@@ -1,0 +1,87 @@
+[GAME]
+{
+	FixedRNGSeed=20862;
+	HostPort=8453;
+	MapName=Mediterraneum_V1;
+	GameType=Beyond All Reason dev;
+	GameStartDelay=0;
+	StartPosType=0;
+	IsHost=1;
+	MyPlayerName=Spectator;
+
+	[MODOPTIONS]
+	{
+		6g_civilian_mode=civilian_only;
+		6g_civilian_faction_count=2;
+		6g_match_duration=30;
+		6g_engineer_fatigue=true;
+		6g_housing_required=true;
+		6g_building_reliability=true;
+		6g_zoning_rules=true;
+		6g_density_penalty=true;
+		6g_metal_logistics=true;
+		6g_service_radius=true;
+		6g_resource_decay=false;
+		6g_flashmob_events=false;
+		6g_commander_coverage_radius=500;
+		6g_autopilot_strategy=aggressive;
+		6g_agent_bridge=true;
+		6g_agent_interval=60;
+		6g_random_seed=20862;
+		6g_networkbst_autoplace=true;
+		6g_save_checkpoints=false;
+		6g_ai_order_delay=45;
+		6g_agent_action_delay=45;
+		6g_headless=true;
+		MinSpeed=1;
+		MaxSpeed=20;
+		6g_target_speed=5;
+		6g_path_loss_exponent=2.0;
+	}
+
+	[ALLYTEAM0]
+	{
+	}
+
+	[ALLYTEAM1]
+	{
+	}
+
+	[TEAM0]
+	{
+		AllyTeam=0;
+		TeamLeader=0;
+		RGBColor=0.0 0.5 1.0;
+		Side=Armada;
+	}
+
+	[TEAM1]
+	{
+		AllyTeam=1;
+		TeamLeader=0;
+		RGBColor=1.0 0.3 0.0;
+		Side=Cortex;
+	}
+
+	[PLAYER0]
+	{
+		Spectator=1;
+		Name=Spectator;
+	}
+
+	[AI0]
+	{
+		Team=0;
+		Name=Civilian_A;
+		ShortName=STAI;
+		Host=0;
+	}
+
+	[AI1]
+	{
+		Team=1;
+		Name=Civilian_B;
+		ShortName=STAI;
+		Host=0;
+	}
+}

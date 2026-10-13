@@ -1,0 +1,362 @@
+{
+  "e4_plain_n": {
+    "value": 4,
+    "definition": "unchanged-action full-length replays",
+    "n": null,
+    "unit": "",
+    "nd": 0,
+    "source": "",
+    "text": "4"
+  },
+  "e4_plain_first_div": {
+    "value": "10006: 8, 10017: 21",
+    "definition": "first differing decision of the non-identical replays",
+    "n": null,
+    "unit": "",
+    "nd": 1,
+    "source": "",
+    "text": "10006: 8, 10017: 21"
+  },
+  "e4_plain_identical": {
+    "value": 2,
+    "definition": "replays bit-identical to the original (decisions and synced log)",
+    "n": null,
+    "unit": "",
+    "nd": 0,
+    "source": "",
+    "text": "2"
+  },
+  "e4_clean_n": {
+    "value": 20,
+    "definition": "branches whose unchanged-action replay is identical through the event epoch (no replay noise)",
+    "n": null,
+    "unit": "",
+    "nd": 0,
+    "source": "",
+    "text": "20"
+  },
+  "e4_exec_n": {
+    "value": 13,
+    "definition": "branches with the substituted order executed",
+    "n": null,
+    "unit": "",
+    "nd": 0,
+    "source": "",
+    "text": "13"
+  },
+  "e4_exec_exact_mean": {
+    "value": 4.384615384615385,
+    "definition": "executed branches: mean exact gain at t (pp)",
+    "n": 13,
+    "unit": "",
+    "nd": 1,
+    "source": "",
+    "text": "4.4"
+  },
+  "e4_exec_est_v2_mean": {
+    "value": 15.785610087237554,
+    "definition": "executed branches: mean geometric estimate (pp)",
+    "n": 13,
+    "unit": "",
+    "nd": 1,
+    "source": "",
+    "text": "15.8"
+  },
+  "e4_exec_v2_bias": {
+    "value": 11.40099470262217,
+    "definition": "executed branches: geometric bias (pp)",
+    "n": 13,
+    "unit": "",
+    "nd": 1,
+    "source": "",
+    "text": "11.4"
+  },
+  "e4_exec_v2_mae": {
+    "value": 11.785622470617078,
+    "definition": "executed branches: geometric MAE (pp)",
+    "n": 13,
+    "unit": "",
+    "nd": 1,
+    "source": "",
+    "text": "11.8"
+  },
+  "e4_exec_v2_rho": {
+    "value": 0.40777052016921145,
+    "definition": "executed branches: Spearman rho geometric vs exact",
+    "n": null,
+    "unit": "",
+    "nd": 2,
+    "source": "",
+    "text": "0.41"
+  },
+  "e4_exec_legacy_bias": {
+    "value": 0.92119186074537,
+    "definition": "executed branches: legacy bias (pp)",
+    "n": 13,
+    "unit": "",
+    "nd": 1,
+    "source": "",
+    "text": "0.9"
+  },
+  "e4_exec_legacy_mae": {
+    "value": 14.82229698468719,
+    "definition": "executed branches: legacy MAE (pp)",
+    "n": 13,
+    "unit": "",
+    "nd": 1,
+    "source": "",
+    "text": "14.8"
+  },
+  "e4_exec_legacy_rho": {
+    "value": -0.3806900173033992,
+    "definition": "executed branches: Spearman rho legacy vs exact",
+    "n": null,
+    "unit": "",
+    "nd": 2,
+    "source": "",
+    "text": "-0.38"
+  },
+  "e4_exec_pos": {
+    "value": 9,
+    "definition": "executed branches with exact gain > 0 at t",
+    "n": null,
+    "unit": "",
+    "nd": 0,
+    "source": "",
+    "text": "9"
+  },
+  "e4_rej_exact_mean": {
+    "value": 1.0,
+    "definition": "rejected branches: mean exact gain at t (pp)",
+    "n": 7,
+    "unit": "",
+    "nd": 1,
+    "source": "",
+    "text": "1.0"
+  },
+  "e4_rej_est_v2_mean": {
+    "value": 1.9715362322136991,
+    "definition": "rejected branches: mean geometric estimate (pp)",
+    "n": 7,
+    "unit": "",
+    "nd": 1,
+    "source": "",
+    "text": "2.0"
+  },
+  "e4_branches_n": {
+    "value": 23,
+    "definition": "usable counterfactual branches",
+    "n": null,
+    "unit": "",
+    "nd": 0,
+    "source": "",
+    "text": "23"
+  },
+  "e4_prefix_identical": {
+    "value": 23,
+    "definition": "branches identical to the original before k0",
+    "n": null,
+    "unit": "",
+    "nd": 0,
+    "source": "",
+    "text": "23"
+  },
+  "e4_executed": {
+    "value": 16,
+    "definition": "branches whose substituted order passed validation and was executed",
+    "n": null,
+    "unit": "",
+    "nd": 0,
+    "source": "",
+    "text": "16"
+  },
+  "e4_exact_pos": {
+    "value": 13,
+    "definition": "branches with exact gain > 0 at t",
+    "n": null,
+    "unit": "",
+    "nd": 0,
+    "source": "",
+    "text": "13"
+  },
+  "e4_exact_neg": {
+    "value": 5,
+    "definition": "branches with exact gain < 0 at t",
+    "n": null,
+    "unit": "",
+    "nd": 0,
+    "source": "",
+    "text": "5"
+  },
+  "e4_exact_mean": {
+    "value": 2.869565217391304,
+    "definition": "mean exact gain at t (pp)",
+    "n": 23,
+    "unit": "",
+    "nd": 1,
+    "source": "",
+    "text": "2.9"
+  },
+  "e4_exact_end_pos": {
+    "value": 12,
+    "definition": "branches with exact gain > 0 at episode end",
+    "n": null,
+    "unit": "",
+    "nd": 0,
+    "source": "",
+    "text": "12"
+  },
+  "e4_exact_end_mean": {
+    "value": 0.782608695652174,
+    "definition": "mean exact gain at episode end (pp)",
+    "n": 23,
+    "unit": "",
+    "nd": 1,
+    "source": "",
+    "text": "0.8"
+  },
+  "e4_mean_after_pos": {
+    "value": 13,
+    "definition": "branches with positive mean coverage difference after k0",
+    "n": null,
+    "unit": "",
+    "nd": 0,
+    "source": "",
+    "text": "13"
+  },
+  "e4_est_v2_mean": {
+    "value": 9.522334119981917,
+    "definition": "mean geometric estimate (pp)",
+    "n": 23,
+    "unit": "",
+    "nd": 1,
+    "source": "",
+    "text": "9.5"
+  },
+  "e4_est_legacy_mean": {
+    "value": 7.2834623630373585,
+    "definition": "mean legacy estimate (pp)",
+    "n": 23,
+    "unit": "",
+    "nd": 1,
+    "source": "",
+    "text": "7.3"
+  },
+  "e4_sign_agree_v2": {
+    "value": 18,
+    "definition": "branches where geometric estimate and exact gain agree in sign (>0 vs <=0)",
+    "n": null,
+    "unit": "",
+    "nd": 0,
+    "source": "",
+    "text": "18"
+  },
+  "e4_v2_bias": {
+    "value": 6.652768902590613,
+    "definition": "geometric: mean(estimate - exact) at t (pp)",
+    "n": 23,
+    "unit": "",
+    "nd": 1,
+    "source": "",
+    "text": "6.7"
+  },
+  "e4_v2_mae": {
+    "value": 7.478862858413821,
+    "definition": "geometric: mean |estimate - exact| (pp)",
+    "n": 23,
+    "unit": "",
+    "nd": 1,
+    "source": "",
+    "text": "7.5"
+  },
+  "e4_v2_rho": {
+    "value": 0.5754712631154371,
+    "definition": "geometric: Spearman rho vs exact gain",
+    "n": null,
+    "unit": "",
+    "nd": 2,
+    "source": "",
+    "text": "0.58"
+  },
+  "e4_v2_rho_p": {
+    "value": "0.004",
+    "definition": "geometric: p of Spearman rho",
+    "n": null,
+    "unit": "",
+    "nd": 1,
+    "source": "",
+    "text": "0.004"
+  },
+  "e4_clean_exec": {
+    "value": 13,
+    "definition": "clean branches with the substituted order executed",
+    "n": null,
+    "unit": "",
+    "nd": 0,
+    "source": "",
+    "text": "13"
+  },
+  "e4_clean_sign_agree_v2": {
+    "value": 16,
+    "definition": "clean branches with sign agreement geometric vs exact",
+    "n": null,
+    "unit": "",
+    "nd": 0,
+    "source": "",
+    "text": "16"
+  },
+  "e4_clean_v2_bias": {
+    "value": 7.750684237979205,
+    "definition": "clean branches: geometric bias (pp)",
+    "n": 20,
+    "unit": "",
+    "nd": 1,
+    "source": "",
+    "text": "7.8"
+  },
+  "e4_clean_v2_mae": {
+    "value": 8.500692287175895,
+    "definition": "clean branches: geometric MAE (pp)",
+    "n": 20,
+    "unit": "",
+    "nd": 1,
+    "source": "",
+    "text": "8.5"
+  },
+  "e4_clean_v2_rho": {
+    "value": 0.5645111036646269,
+    "definition": "clean branches: Spearman rho geometric vs exact",
+    "n": null,
+    "unit": "",
+    "nd": 2,
+    "source": "",
+    "text": "0.56"
+  },
+  "e4_clean_legacy_bias": {
+    "value": 3.7925472304172807,
+    "definition": "clean branches: fixed-fraction bias (pp)",
+    "n": 20,
+    "unit": "",
+    "nd": 1,
+    "source": "",
+    "text": "3.8"
+  },
+  "e4_clean_legacy_mae": {
+    "value": 12.828265560979464,
+    "definition": "clean branches: fixed-fraction MAE (pp)",
+    "n": 20,
+    "unit": "",
+    "nd": 1,
+    "source": "",
+    "text": "12.8"
+  },
+  "e4_clean_legacy_rho": {
+    "value": -0.515109413300937,
+    "definition": "clean branches: Spearman rho fixed-fraction vs exact",
+    "n": null,
+    "unit": "",
+    "nd": 2,
+    "source": "",
+    "text": "-0.52"
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "record": "header",
+  "protocol": 2,
+  "orchestrator_version": "2.0",
+  "episode_id": "s4_adversarial_rule_core_seed10151_20260927_144247",
+  "scenario": "s4_adversarial",
+  "backend": "rule",
+  "backend_arg": "rule",
+  "seed": 10151,
+  "team": 0,
+  "commit": "90f8c9795533ed60ee623e7abe4e1065bba742dc",
+  "start_time": 1790512967.5520496,
+  "start_time_iso": "2026-09-27T14:42:47",
+  "host": "user-G7-7790",
+  "write_dir": "/tmp/bar_wd_0",
+  "game_log": "/media/user/Linux_data2/Programs/Beyond-All-Reason-master/agent/results_v2/s4_adversarial_rule_core_seed10151_20260927_144247/gamelog.txt",
+  "action_file": "/tmp/bar_wd_0/6g_agent_action.txt",
+  "expose_disconnected_positions": false,
+  "game_id": "520fb96a4ef181482da48928df4107dd",
+  "decisions": 29,
+  "end_time": 1790513473.8109145
+}

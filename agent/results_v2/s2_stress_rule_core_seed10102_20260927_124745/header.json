@@ -1,0 +1,22 @@
+{
+  "record": "header",
+  "protocol": 2,
+  "orchestrator_version": "2.0",
+  "episode_id": "s2_stress_rule_core_seed10102_20260927_124745",
+  "scenario": "s2_stress",
+  "backend": "rule",
+  "backend_arg": "rule",
+  "seed": 10102,
+  "team": 0,
+  "commit": "90f8c9795533ed60ee623e7abe4e1065bba742dc",
+  "start_time": 1790506065.8864844,
+  "start_time_iso": "2026-09-27T12:47:45",
+  "host": "user-G7-7790",
+  "write_dir": "/tmp/bar_wd_0",
+  "game_log": "/media/user/Linux_data2/Programs/Beyond-All-Reason-master/agent/results_v2/s2_stress_rule_core_seed10102_20260927_124745/gamelog.txt",
+  "action_file": "/tmp/bar_wd_0/6g_agent_action.txt",
+  "expose_disconnected_positions": false,
+  "game_id": "60f4b86a7f1247abd0876a17a84c3944",
+  "decisions": 29,
+  "end_time": 1790506518.6124675
+}

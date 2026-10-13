@@ -1,0 +1,5 @@
+branch_episode_dir,drop_1,est_legacy_gain,est_v2_gain,est_v2_method,exact_gain_end,exact_gain_mean_after,exact_gain_t,inject_action,inject_decision,n_branch,n_orig,original_episode_dir,prefix_identical,status
+agent/results_v2/s1_peaceful_rule_detU14_seed777_20260927_001318,0,0.0,0.0,positions_centroid_from_t_no_disconnected,0,0.0,0,,2,5,5,agent/results_v2/s1_peaceful_rule_detX16_seed777_20260927_002529,True,ok
+agent/results_v2/s1_peaceful_replay_plainX16_seed777_20260927_071201,,,,,,,,,0,,,agent/results_v2/s1_peaceful_rule_detX16_seed777_20260927_002529,,no inject_decision
+agent/results_v2/s1_peaceful_replay_injectX16d3_seed777_20260927_071544,0,0.0,0.0,positions_centroid_from_t_no_disconnected,0,0.0,0,place_bs|small_cell|4920|9440,3,5,5,agent/results_v2/s1_peaceful_rule_detX16_seed777_20260927_002529,True,ok
+agent/results_v2/does_not_exist_either,,,,,,,,,3,,,agent/results_v2/does_not_exist,,missing episode dir/decisions.jsonl

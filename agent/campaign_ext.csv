@@ -1,0 +1,171 @@
+scenario,backend,seed,replicate,tag,orch_args,duration,speed,autoplace,set
+# Tier-2 extension campaign (REVISION_PLAN.md §4.2): E1 multi-model, E2 prompt v2 + history, E3 autonomous layer off, E5 path-loss sensitivity.
+# Seeds 20001-20320 (the core campaign used 10001-10155). Write to a SEPARATE results dir: analysis/revision/load_runs.py groups by
+# (scenario, backend) only, so these arms would be merged into the core tables if they shared agent/results_v2.
+# Run:   agent/campaign.py agent/campaign_ext.csv --parallel 1 --results-dir agent/results_v2_ext
+#        subsets: --filter e1_gptoss | e1_fastctx4b | e2_v2 | e3_noauto | e5_pl2 | e5_pl4 ; LLM-free rows only: --filter rule / --filter noop
+# Order: LLM rows first (need the :9000 tunnel), LLM-free baselines (E3 rule/noop, E5 rule) last.
+# E4 (regret validation by deterministic re-simulation) and E6 (screenshot episode) are NOT manifest rows: E4 = regret.py --mapping +
+# run_episode.sh ... replay --orch-args '--replay-file ... --inject-decision k --inject-action ...'; E6 = one windowed run with the camera director.
+
+# --- E1 multi-model: openai/gpt-oss-120b (probe 28 Sep 2026: HTTP 200 in 2 s). S1 N=10, S3 N=10 ---
+s1_peaceful,llm,20001,1,e1_gptoss,"--model openai/gpt-oss-120b --prompt-version v1",30,5,true,
+s1_peaceful,llm,20002,2,e1_gptoss,"--model openai/gpt-oss-120b --prompt-version v1",30,5,true,
+s1_peaceful,llm,20003,3,e1_gptoss,"--model openai/gpt-oss-120b --prompt-version v1",30,5,true,
+s1_peaceful,llm,20004,4,e1_gptoss,"--model openai/gpt-oss-120b --prompt-version v1",30,5,true,
+s1_peaceful,llm,20005,5,e1_gptoss,"--model openai/gpt-oss-120b --prompt-version v1",30,5,true,
+s1_peaceful,llm,20006,6,e1_gptoss,"--model openai/gpt-oss-120b --prompt-version v1",30,5,true,
+s1_peaceful,llm,20007,7,e1_gptoss,"--model openai/gpt-oss-120b --prompt-version v1",30,5,true,
+s1_peaceful,llm,20008,8,e1_gptoss,"--model openai/gpt-oss-120b --prompt-version v1",30,5,true,
+s1_peaceful,llm,20009,9,e1_gptoss,"--model openai/gpt-oss-120b --prompt-version v1",30,5,true,
+s1_peaceful,llm,20010,10,e1_gptoss,"--model openai/gpt-oss-120b --prompt-version v1",30,5,true,
+s3_daynight,llm,20011,1,e1_gptoss,"--model openai/gpt-oss-120b --prompt-version v1",30,5,true,
+s3_daynight,llm,20012,2,e1_gptoss,"--model openai/gpt-oss-120b --prompt-version v1",30,5,true,
+s3_daynight,llm,20013,3,e1_gptoss,"--model openai/gpt-oss-120b --prompt-version v1",30,5,true,
+s3_daynight,llm,20014,4,e1_gptoss,"--model openai/gpt-oss-120b --prompt-version v1",30,5,true,
+s3_daynight,llm,20015,5,e1_gptoss,"--model openai/gpt-oss-120b --prompt-version v1",30,5,true,
+s3_daynight,llm,20016,6,e1_gptoss,"--model openai/gpt-oss-120b --prompt-version v1",30,5,true,
+s3_daynight,llm,20017,7,e1_gptoss,"--model openai/gpt-oss-120b --prompt-version v1",30,5,true,
+s3_daynight,llm,20018,8,e1_gptoss,"--model openai/gpt-oss-120b --prompt-version v1",30,5,true,
+s3_daynight,llm,20019,9,e1_gptoss,"--model openai/gpt-oss-120b --prompt-version v1",30,5,true,
+s3_daynight,llm,20020,10,e1_gptoss,"--model openai/gpt-oss-120b --prompt-version v1",30,5,true,
+
+# --- E1 multi-model: Qwen/Qwen3.8-Flash-Next-FP8 (within-family generation change). DISABLED: probes 28 Sep 2026 (both the FP8 and FP8-1M ids) -> platform HTTP 500 {"error": "Request timed out."} after 183 s.
+#     Re-probe (see docker/README.md) and uncomment when it answers a 20-token request in a few seconds.
+#s1_peaceful,llm,20021,1,e1_qwenflash,"--model Qwen/Qwen3.8-Flash-Next-FP8 --prompt-version v1",30,5,true,
+#s1_peaceful,llm,20022,2,e1_qwenflash,"--model Qwen/Qwen3.8-Flash-Next-FP8 --prompt-version v1",30,5,true,
+#s1_peaceful,llm,20023,3,e1_qwenflash,"--model Qwen/Qwen3.8-Flash-Next-FP8 --prompt-version v1",30,5,true,
+#s1_peaceful,llm,20024,4,e1_qwenflash,"--model Qwen/Qwen3.8-Flash-Next-FP8 --prompt-version v1",30,5,true,
+#s1_peaceful,llm,20025,5,e1_qwenflash,"--model Qwen/Qwen3.8-Flash-Next-FP8 --prompt-version v1",30,5,true,
+#s1_peaceful,llm,20026,6,e1_qwenflash,"--model Qwen/Qwen3.8-Flash-Next-FP8 --prompt-version v1",30,5,true,
+#s1_peaceful,llm,20027,7,e1_qwenflash,"--model Qwen/Qwen3.8-Flash-Next-FP8 --prompt-version v1",30,5,true,
+#s1_peaceful,llm,20028,8,e1_qwenflash,"--model Qwen/Qwen3.8-Flash-Next-FP8 --prompt-version v1",30,5,true,
+#s1_peaceful,llm,20029,9,e1_qwenflash,"--model Qwen/Qwen3.8-Flash-Next-FP8 --prompt-version v1",30,5,true,
+#s1_peaceful,llm,20030,10,e1_qwenflash,"--model Qwen/Qwen3.8-Flash-Next-FP8 --prompt-version v1",30,5,true,
+#s3_daynight,llm,20031,1,e1_qwenflash,"--model Qwen/Qwen3.8-Flash-Next-FP8 --prompt-version v1",30,5,true,
+#s3_daynight,llm,20032,2,e1_qwenflash,"--model Qwen/Qwen3.8-Flash-Next-FP8 --prompt-version v1",30,5,true,
+#s3_daynight,llm,20033,3,e1_qwenflash,"--model Qwen/Qwen3.8-Flash-Next-FP8 --prompt-version v1",30,5,true,
+#s3_daynight,llm,20034,4,e1_qwenflash,"--model Qwen/Qwen3.8-Flash-Next-FP8 --prompt-version v1",30,5,true,
+#s3_daynight,llm,20035,5,e1_qwenflash,"--model Qwen/Qwen3.8-Flash-Next-FP8 --prompt-version v1",30,5,true,
+#s3_daynight,llm,20036,6,e1_qwenflash,"--model Qwen/Qwen3.8-Flash-Next-FP8 --prompt-version v1",30,5,true,
+#s3_daynight,llm,20037,7,e1_qwenflash,"--model Qwen/Qwen3.8-Flash-Next-FP8 --prompt-version v1",30,5,true,
+#s3_daynight,llm,20038,8,e1_qwenflash,"--model Qwen/Qwen3.8-Flash-Next-FP8 --prompt-version v1",30,5,true,
+#s3_daynight,llm,20039,9,e1_qwenflash,"--model Qwen/Qwen3.8-Flash-Next-FP8 --prompt-version v1",30,5,true,
+#s3_daynight,llm,20040,10,e1_qwenflash,"--model Qwen/Qwen3.8-Flash-Next-FP8 --prompt-version v1",30,5,true,
+
+# --- E1 multi-model: deepseek-ai/DeepSeek-V4-Flash-0731 (third family). DISABLED: 27 Sep (182 s) and 28 Sep 2026 -> platform HTTP 500 {"error": "Request timed out."} after 183 s. Re-probe before enabling.
+#s1_peaceful,llm,20041,1,e1_dsv4,"--model deepseek-ai/DeepSeek-V4-Flash-0731 --prompt-version v1",30,5,true,
+#s1_peaceful,llm,20042,2,e1_dsv4,"--model deepseek-ai/DeepSeek-V4-Flash-0731 --prompt-version v1",30,5,true,
+#s1_peaceful,llm,20043,3,e1_dsv4,"--model deepseek-ai/DeepSeek-V4-Flash-0731 --prompt-version v1",30,5,true,
+#s1_peaceful,llm,20044,4,e1_dsv4,"--model deepseek-ai/DeepSeek-V4-Flash-0731 --prompt-version v1",30,5,true,
+#s1_peaceful,llm,20045,5,e1_dsv4,"--model deepseek-ai/DeepSeek-V4-Flash-0731 --prompt-version v1",30,5,true,
+#s1_peaceful,llm,20046,6,e1_dsv4,"--model deepseek-ai/DeepSeek-V4-Flash-0731 --prompt-version v1",30,5,true,
+#s1_peaceful,llm,20047,7,e1_dsv4,"--model deepseek-ai/DeepSeek-V4-Flash-0731 --prompt-version v1",30,5,true,
+#s1_peaceful,llm,20048,8,e1_dsv4,"--model deepseek-ai/DeepSeek-V4-Flash-0731 --prompt-version v1",30,5,true,
+#s1_peaceful,llm,20049,9,e1_dsv4,"--model deepseek-ai/DeepSeek-V4-Flash-0731 --prompt-version v1",30,5,true,
+#s1_peaceful,llm,20050,10,e1_dsv4,"--model deepseek-ai/DeepSeek-V4-Flash-0731 --prompt-version v1",30,5,true,
+#s3_daynight,llm,20051,1,e1_dsv4,"--model deepseek-ai/DeepSeek-V4-Flash-0731 --prompt-version v1",30,5,true,
+#s3_daynight,llm,20052,2,e1_dsv4,"--model deepseek-ai/DeepSeek-V4-Flash-0731 --prompt-version v1",30,5,true,
+#s3_daynight,llm,20053,3,e1_dsv4,"--model deepseek-ai/DeepSeek-V4-Flash-0731 --prompt-version v1",30,5,true,
+#s3_daynight,llm,20054,4,e1_dsv4,"--model deepseek-ai/DeepSeek-V4-Flash-0731 --prompt-version v1",30,5,true,
+#s3_daynight,llm,20055,5,e1_dsv4,"--model deepseek-ai/DeepSeek-V4-Flash-0731 --prompt-version v1",30,5,true,
+#s3_daynight,llm,20056,6,e1_dsv4,"--model deepseek-ai/DeepSeek-V4-Flash-0731 --prompt-version v1",30,5,true,
+#s3_daynight,llm,20057,7,e1_dsv4,"--model deepseek-ai/DeepSeek-V4-Flash-0731 --prompt-version v1",30,5,true,
+#s3_daynight,llm,20058,8,e1_dsv4,"--model deepseek-ai/DeepSeek-V4-Flash-0731 --prompt-version v1",30,5,true,
+#s3_daynight,llm,20059,9,e1_dsv4,"--model deepseek-ai/DeepSeek-V4-Flash-0731 --prompt-version v1",30,5,true,
+#s3_daynight,llm,20060,10,e1_dsv4,"--model deepseek-ai/DeepSeek-V4-Flash-0731 --prompt-version v1",30,5,true,
+
+# --- E1 small-model reference: Microsoft/FastContext-1.0-4B-RL (hosted, probe 28 Sep 2026: HTTP 200 in <1 s). S1 N=10, S3 N=10 ---
+s1_peaceful,llm,20061,1,e1_fastctx4b,"--model Microsoft/FastContext-1.0-4B-RL --prompt-version v1",30,5,true,
+s1_peaceful,llm,20062,2,e1_fastctx4b,"--model Microsoft/FastContext-1.0-4B-RL --prompt-version v1",30,5,true,
+s1_peaceful,llm,20063,3,e1_fastctx4b,"--model Microsoft/FastContext-1.0-4B-RL --prompt-version v1",30,5,true,
+s1_peaceful,llm,20064,4,e1_fastctx4b,"--model Microsoft/FastContext-1.0-4B-RL --prompt-version v1",30,5,true,
+s1_peaceful,llm,20065,5,e1_fastctx4b,"--model Microsoft/FastContext-1.0-4B-RL --prompt-version v1",30,5,true,
+s1_peaceful,llm,20066,6,e1_fastctx4b,"--model Microsoft/FastContext-1.0-4B-RL --prompt-version v1",30,5,true,
+s1_peaceful,llm,20067,7,e1_fastctx4b,"--model Microsoft/FastContext-1.0-4B-RL --prompt-version v1",30,5,true,
+s1_peaceful,llm,20068,8,e1_fastctx4b,"--model Microsoft/FastContext-1.0-4B-RL --prompt-version v1",30,5,true,
+s1_peaceful,llm,20069,9,e1_fastctx4b,"--model Microsoft/FastContext-1.0-4B-RL --prompt-version v1",30,5,true,
+s1_peaceful,llm,20070,10,e1_fastctx4b,"--model Microsoft/FastContext-1.0-4B-RL --prompt-version v1",30,5,true,
+s3_daynight,llm,20071,1,e1_fastctx4b,"--model Microsoft/FastContext-1.0-4B-RL --prompt-version v1",30,5,true,
+s3_daynight,llm,20072,2,e1_fastctx4b,"--model Microsoft/FastContext-1.0-4B-RL --prompt-version v1",30,5,true,
+s3_daynight,llm,20073,3,e1_fastctx4b,"--model Microsoft/FastContext-1.0-4B-RL --prompt-version v1",30,5,true,
+s3_daynight,llm,20074,4,e1_fastctx4b,"--model Microsoft/FastContext-1.0-4B-RL --prompt-version v1",30,5,true,
+s3_daynight,llm,20075,5,e1_fastctx4b,"--model Microsoft/FastContext-1.0-4B-RL --prompt-version v1",30,5,true,
+s3_daynight,llm,20076,6,e1_fastctx4b,"--model Microsoft/FastContext-1.0-4B-RL --prompt-version v1",30,5,true,
+s3_daynight,llm,20077,7,e1_fastctx4b,"--model Microsoft/FastContext-1.0-4B-RL --prompt-version v1",30,5,true,
+s3_daynight,llm,20078,8,e1_fastctx4b,"--model Microsoft/FastContext-1.0-4B-RL --prompt-version v1",30,5,true,
+s3_daynight,llm,20079,9,e1_fastctx4b,"--model Microsoft/FastContext-1.0-4B-RL --prompt-version v1",30,5,true,
+s3_daynight,llm,20080,10,e1_fastctx4b,"--model Microsoft/FastContext-1.0-4B-RL --prompt-version v1",30,5,true,
+
+# --- E2 prompt variant: primary model, prompt v2 (temporal guidance) + 5-step history. S1 N=10, S3 N=10 ---
+s1_peaceful,llm,20101,1,e2_v2,"--model Qwen/Qwen3.8-27B-FP8-1M --prompt-version v2 --history 5",30,5,true,
+s1_peaceful,llm,20102,2,e2_v2,"--model Qwen/Qwen3.8-27B-FP8-1M --prompt-version v2 --history 5",30,5,true,
+s1_peaceful,llm,20103,3,e2_v2,"--model Qwen/Qwen3.8-27B-FP8-1M --prompt-version v2 --history 5",30,5,true,
+s1_peaceful,llm,20104,4,e2_v2,"--model Qwen/Qwen3.8-27B-FP8-1M --prompt-version v2 --history 5",30,5,true,
+s1_peaceful,llm,20105,5,e2_v2,"--model Qwen/Qwen3.8-27B-FP8-1M --prompt-version v2 --history 5",30,5,true,
+s1_peaceful,llm,20106,6,e2_v2,"--model Qwen/Qwen3.8-27B-FP8-1M --prompt-version v2 --history 5",30,5,true,
+s1_peaceful,llm,20107,7,e2_v2,"--model Qwen/Qwen3.8-27B-FP8-1M --prompt-version v2 --history 5",30,5,true,
+s1_peaceful,llm,20108,8,e2_v2,"--model Qwen/Qwen3.8-27B-FP8-1M --prompt-version v2 --history 5",30,5,true,
+s1_peaceful,llm,20109,9,e2_v2,"--model Qwen/Qwen3.8-27B-FP8-1M --prompt-version v2 --history 5",30,5,true,
+s1_peaceful,llm,20110,10,e2_v2,"--model Qwen/Qwen3.8-27B-FP8-1M --prompt-version v2 --history 5",30,5,true,
+s3_daynight,llm,20111,1,e2_v2,"--model Qwen/Qwen3.8-27B-FP8-1M --prompt-version v2 --history 5",30,5,true,
+s3_daynight,llm,20112,2,e2_v2,"--model Qwen/Qwen3.8-27B-FP8-1M --prompt-version v2 --history 5",30,5,true,
+s3_daynight,llm,20113,3,e2_v2,"--model Qwen/Qwen3.8-27B-FP8-1M --prompt-version v2 --history 5",30,5,true,
+s3_daynight,llm,20114,4,e2_v2,"--model Qwen/Qwen3.8-27B-FP8-1M --prompt-version v2 --history 5",30,5,true,
+s3_daynight,llm,20115,5,e2_v2,"--model Qwen/Qwen3.8-27B-FP8-1M --prompt-version v2 --history 5",30,5,true,
+s3_daynight,llm,20116,6,e2_v2,"--model Qwen/Qwen3.8-27B-FP8-1M --prompt-version v2 --history 5",30,5,true,
+s3_daynight,llm,20117,7,e2_v2,"--model Qwen/Qwen3.8-27B-FP8-1M --prompt-version v2 --history 5",30,5,true,
+s3_daynight,llm,20118,8,e2_v2,"--model Qwen/Qwen3.8-27B-FP8-1M --prompt-version v2 --history 5",30,5,true,
+s3_daynight,llm,20119,9,e2_v2,"--model Qwen/Qwen3.8-27B-FP8-1M --prompt-version v2 --history 5",30,5,true,
+s3_daynight,llm,20120,10,e2_v2,"--model Qwen/Qwen3.8-27B-FP8-1M --prompt-version v2 --history 5",30,5,true,
+
+# --- E3 autonomous layer off (6g_networkbst_autoplace=false): S1 LLM 10, rule 10, noop 5 ---
+s1_peaceful,llm,20201,1,e3_noauto,"--model Qwen/Qwen3.8-27B-FP8-1M --prompt-version v1",30,5,false,
+s1_peaceful,llm,20202,2,e3_noauto,"--model Qwen/Qwen3.8-27B-FP8-1M --prompt-version v1",30,5,false,
+s1_peaceful,llm,20203,3,e3_noauto,"--model Qwen/Qwen3.8-27B-FP8-1M --prompt-version v1",30,5,false,
+s1_peaceful,llm,20204,4,e3_noauto,"--model Qwen/Qwen3.8-27B-FP8-1M --prompt-version v1",30,5,false,
+s1_peaceful,llm,20205,5,e3_noauto,"--model Qwen/Qwen3.8-27B-FP8-1M --prompt-version v1",30,5,false,
+s1_peaceful,llm,20206,6,e3_noauto,"--model Qwen/Qwen3.8-27B-FP8-1M --prompt-version v1",30,5,false,
+s1_peaceful,llm,20207,7,e3_noauto,"--model Qwen/Qwen3.8-27B-FP8-1M --prompt-version v1",30,5,false,
+s1_peaceful,llm,20208,8,e3_noauto,"--model Qwen/Qwen3.8-27B-FP8-1M --prompt-version v1",30,5,false,
+s1_peaceful,llm,20209,9,e3_noauto,"--model Qwen/Qwen3.8-27B-FP8-1M --prompt-version v1",30,5,false,
+s1_peaceful,llm,20210,10,e3_noauto,"--model Qwen/Qwen3.8-27B-FP8-1M --prompt-version v1",30,5,false,
+
+# --- E5 radio-model sensitivity (6g_path_loss_exponent; default 3.0 in every other run): S1 LLM vs rule at n=2.0 and n=4.0, N=5 each ---
+s1_peaceful,llm,20301,1,e5_pl2,"--model Qwen/Qwen3.8-27B-FP8-1M --prompt-version v1",30,5,true,6g_path_loss_exponent=2.0
+s1_peaceful,llm,20302,2,e5_pl2,"--model Qwen/Qwen3.8-27B-FP8-1M --prompt-version v1",30,5,true,6g_path_loss_exponent=2.0
+s1_peaceful,llm,20303,3,e5_pl2,"--model Qwen/Qwen3.8-27B-FP8-1M --prompt-version v1",30,5,true,6g_path_loss_exponent=2.0
+s1_peaceful,llm,20304,4,e5_pl2,"--model Qwen/Qwen3.8-27B-FP8-1M --prompt-version v1",30,5,true,6g_path_loss_exponent=2.0
+s1_peaceful,llm,20305,5,e5_pl2,"--model Qwen/Qwen3.8-27B-FP8-1M --prompt-version v1",30,5,true,6g_path_loss_exponent=2.0
+s1_peaceful,llm,20311,1,e5_pl4,"--model Qwen/Qwen3.8-27B-FP8-1M --prompt-version v1",30,5,true,6g_path_loss_exponent=4.0
+s1_peaceful,llm,20312,2,e5_pl4,"--model Qwen/Qwen3.8-27B-FP8-1M --prompt-version v1",30,5,true,6g_path_loss_exponent=4.0
+s1_peaceful,llm,20313,3,e5_pl4,"--model Qwen/Qwen3.8-27B-FP8-1M --prompt-version v1",30,5,true,6g_path_loss_exponent=4.0
+s1_peaceful,llm,20314,4,e5_pl4,"--model Qwen/Qwen3.8-27B-FP8-1M --prompt-version v1",30,5,true,6g_path_loss_exponent=4.0
+s1_peaceful,llm,20315,5,e5_pl4,"--model Qwen/Qwen3.8-27B-FP8-1M --prompt-version v1",30,5,true,6g_path_loss_exponent=4.0
+
+# --- LLM-free baselines (run last / on any machine without the tunnel) ---
+s1_peaceful,rule,20211,1,e3_noauto,,30,5,false,
+s1_peaceful,rule,20212,2,e3_noauto,,30,5,false,
+s1_peaceful,rule,20213,3,e3_noauto,,30,5,false,
+s1_peaceful,rule,20214,4,e3_noauto,,30,5,false,
+s1_peaceful,rule,20215,5,e3_noauto,,30,5,false,
+s1_peaceful,rule,20216,6,e3_noauto,,30,5,false,
+s1_peaceful,rule,20217,7,e3_noauto,,30,5,false,
+s1_peaceful,rule,20218,8,e3_noauto,,30,5,false,
+s1_peaceful,rule,20219,9,e3_noauto,,30,5,false,
+s1_peaceful,rule,20220,10,e3_noauto,,30,5,false,
+s1_peaceful,noop,20221,1,e3_noauto,,30,5,false,
+s1_peaceful,noop,20222,2,e3_noauto,,30,5,false,
+s1_peaceful,noop,20223,3,e3_noauto,,30,5,false,
+s1_peaceful,noop,20224,4,e3_noauto,,30,5,false,
+s1_peaceful,noop,20225,5,e3_noauto,,30,5,false,
+s1_peaceful,rule,20306,1,e5_pl2,,30,5,true,6g_path_loss_exponent=2.0
+s1_peaceful,rule,20307,2,e5_pl2,,30,5,true,6g_path_loss_exponent=2.0
+s1_peaceful,rule,20308,3,e5_pl2,,30,5,true,6g_path_loss_exponent=2.0
+s1_peaceful,rule,20309,4,e5_pl2,,30,5,true,6g_path_loss_exponent=2.0
+s1_peaceful,rule,20310,5,e5_pl2,,30,5,true,6g_path_loss_exponent=2.0
+s1_peaceful,rule,20316,1,e5_pl4,,30,5,true,6g_path_loss_exponent=4.0
+s1_peaceful,rule,20317,2,e5_pl4,,30,5,true,6g_path_loss_exponent=4.0
+s1_peaceful,rule,20318,3,e5_pl4,,30,5,true,6g_path_loss_exponent=4.0
+s1_peaceful,rule,20319,4,e5_pl4,,30,5,true,6g_path_loss_exponent=4.0
+s1_peaceful,rule,20320,5,e5_pl4,,30,5,true,6g_path_loss_exponent=4.0

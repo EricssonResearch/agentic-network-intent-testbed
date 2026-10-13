@@ -1,0 +1,22 @@
+{
+  "record": "header",
+  "protocol": 2,
+  "orchestrator_version": "2.0",
+  "episode_id": "s2_stress_random_core_seed10112_20260927_181643",
+  "scenario": "s2_stress",
+  "backend": "random",
+  "backend_arg": "random",
+  "seed": 10112,
+  "team": 0,
+  "commit": "90f8c9795533ed60ee623e7abe4e1065bba742dc",
+  "start_time": 1790525803.821916,
+  "start_time_iso": "2026-09-27T18:16:43",
+  "host": "user-G7-7790",
+  "write_dir": "/tmp/bar_wd_0",
+  "game_log": "/media/user/Linux_data2/Programs/Beyond-All-Reason-master/agent/results_v2/s2_stress_random_core_seed10112_20260927_181643/gamelog.txt",
+  "action_file": "/tmp/bar_wd_0/6g_agent_action.txt",
+  "expose_disconnected_positions": false,
+  "game_id": "7641b96aae4d1e5dba220d8d3c38f6fe",
+  "decisions": 29,
+  "end_time": 1790526231.4826596
+}

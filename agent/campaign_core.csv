@@ -1,0 +1,158 @@
+scenario,backend,seed,replicate,tag,orch_args,duration,speed,autoplace
+# Tier-1 core campaign (REVISION_PLAN.md §4.1): 155 episodes, seeds 10001-10155; baselines (no LLM endpoint) sorted first.
+# Run: agent/campaign.py agent/campaign_core.csv --parallel 1 --results-dir agent/results_v2   (baselines only: --filter rule / noop / random)
+s1_peaceful,noop,10081,1,core,,30,5,true
+s1_peaceful,random,10071,1,core,,30,5,true
+s1_peaceful,rule,10051,1,core,,30,5,true
+s1_peaceful,noop,10082,2,core,,30,5,true
+s1_peaceful,random,10072,2,core,,30,5,true
+s1_peaceful,rule,10052,2,core,,30,5,true
+s1_peaceful,noop,10083,3,core,,30,5,true
+s1_peaceful,random,10073,3,core,,30,5,true
+s1_peaceful,rule,10053,3,core,,30,5,true
+s1_peaceful,noop,10084,4,core,,30,5,true
+s1_peaceful,random,10074,4,core,,30,5,true
+s1_peaceful,rule,10054,4,core,,30,5,true
+s1_peaceful,noop,10085,5,core,,30,5,true
+s1_peaceful,random,10075,5,core,,30,5,true
+s1_peaceful,rule,10055,5,core,,30,5,true
+s1_peaceful,noop,10086,6,core,,30,5,true
+s1_peaceful,random,10076,6,core,,30,5,true
+s1_peaceful,rule,10056,6,core,,30,5,true
+s1_peaceful,noop,10087,7,core,,30,5,true
+s1_peaceful,random,10077,7,core,,30,5,true
+s1_peaceful,rule,10057,7,core,,30,5,true
+s1_peaceful,noop,10088,8,core,,30,5,true
+s1_peaceful,random,10078,8,core,,30,5,true
+s1_peaceful,rule,10058,8,core,,30,5,true
+s1_peaceful,noop,10089,9,core,,30,5,true
+s1_peaceful,random,10079,9,core,,30,5,true
+s1_peaceful,rule,10059,9,core,,30,5,true
+s1_peaceful,noop,10090,10,core,,30,5,true
+s1_peaceful,random,10080,10,core,,30,5,true
+s1_peaceful,rule,10060,10,core,,30,5,true
+s1_peaceful,rule,10061,11,core,,30,5,true
+s1_peaceful,rule,10062,12,core,,30,5,true
+s1_peaceful,rule,10063,13,core,,30,5,true
+s1_peaceful,rule,10064,14,core,,30,5,true
+s1_peaceful,rule,10065,15,core,,30,5,true
+s1_peaceful,rule,10066,16,core,,30,5,true
+s1_peaceful,rule,10067,17,core,,30,5,true
+s1_peaceful,rule,10068,18,core,,30,5,true
+s1_peaceful,rule,10069,19,core,,30,5,true
+s1_peaceful,rule,10070,20,core,,30,5,true
+s3_daynight,rule,10126,1,core,,30,5,true
+s3_daynight,rule,10127,2,core,,30,5,true
+s3_daynight,rule,10128,3,core,,30,5,true
+s3_daynight,rule,10129,4,core,,30,5,true
+s3_daynight,rule,10130,5,core,,30,5,true
+s3_daynight,rule,10131,6,core,,30,5,true
+s3_daynight,rule,10132,7,core,,30,5,true
+s3_daynight,rule,10133,8,core,,30,5,true
+s3_daynight,rule,10134,9,core,,30,5,true
+s3_daynight,rule,10135,10,core,,30,5,true
+s2_stress,random,10111,1,core,,30,5,true
+s2_stress,rule,10101,1,core,,30,5,true
+s2_stress,random,10112,2,core,,30,5,true
+s2_stress,rule,10102,2,core,,30,5,true
+s2_stress,random,10113,3,core,,30,5,true
+s2_stress,rule,10103,3,core,,30,5,true
+s2_stress,random,10114,4,core,,30,5,true
+s2_stress,rule,10104,4,core,,30,5,true
+s2_stress,random,10115,5,core,,30,5,true
+s2_stress,rule,10105,5,core,,30,5,true
+s2_stress,rule,10106,6,core,,30,5,true
+s2_stress,rule,10107,7,core,,30,5,true
+s2_stress,rule,10108,8,core,,30,5,true
+s2_stress,rule,10109,9,core,,30,5,true
+s2_stress,rule,10110,10,core,,30,5,true
+s4_adversarial,rule,10146,1,core,,30,5,true
+s4_adversarial,rule,10147,2,core,,30,5,true
+s4_adversarial,rule,10148,3,core,,30,5,true
+s4_adversarial,rule,10149,4,core,,30,5,true
+s4_adversarial,rule,10150,5,core,,30,5,true
+s4_adversarial,rule,10151,6,core,,30,5,true
+s4_adversarial,rule,10152,7,core,,30,5,true
+s4_adversarial,rule,10153,8,core,,30,5,true
+s4_adversarial,rule,10154,9,core,,30,5,true
+s4_adversarial,rule,10155,10,core,,30,5,true
+s1_peaceful,llm,10001,1,core,--model Qwen/Qwen3.8-27B-FP8-1M --prompt-version v1,30,5,true
+s1_peaceful,llm_minimal,10041,1,core,--model Qwen/Qwen3.8-27B-FP8-1M --prompt-version v1,30,5,true
+s1_peaceful,llm_nospatial,10021,1,core,--model Qwen/Qwen3.8-27B-FP8-1M --prompt-version v1,30,5,true
+s1_peaceful,llm,10002,2,core,--model Qwen/Qwen3.8-27B-FP8-1M --prompt-version v1,30,5,true
+s1_peaceful,llm_minimal,10042,2,core,--model Qwen/Qwen3.8-27B-FP8-1M --prompt-version v1,30,5,true
+s1_peaceful,llm_nospatial,10022,2,core,--model Qwen/Qwen3.8-27B-FP8-1M --prompt-version v1,30,5,true
+s1_peaceful,llm,10003,3,core,--model Qwen/Qwen3.8-27B-FP8-1M --prompt-version v1,30,5,true
+s1_peaceful,llm_minimal,10043,3,core,--model Qwen/Qwen3.8-27B-FP8-1M --prompt-version v1,30,5,true
+s1_peaceful,llm_nospatial,10023,3,core,--model Qwen/Qwen3.8-27B-FP8-1M --prompt-version v1,30,5,true
+s1_peaceful,llm,10004,4,core,--model Qwen/Qwen3.8-27B-FP8-1M --prompt-version v1,30,5,true
+s1_peaceful,llm_minimal,10044,4,core,--model Qwen/Qwen3.8-27B-FP8-1M --prompt-version v1,30,5,true
+s1_peaceful,llm_nospatial,10024,4,core,--model Qwen/Qwen3.8-27B-FP8-1M --prompt-version v1,30,5,true
+s1_peaceful,llm,10005,5,core,--model Qwen/Qwen3.8-27B-FP8-1M --prompt-version v1,30,5,true
+s1_peaceful,llm_minimal,10045,5,core,--model Qwen/Qwen3.8-27B-FP8-1M --prompt-version v1,30,5,true
+s1_peaceful,llm_nospatial,10025,5,core,--model Qwen/Qwen3.8-27B-FP8-1M --prompt-version v1,30,5,true
+s1_peaceful,llm,10006,6,core,--model Qwen/Qwen3.8-27B-FP8-1M --prompt-version v1,30,5,true
+s1_peaceful,llm_minimal,10046,6,core,--model Qwen/Qwen3.8-27B-FP8-1M --prompt-version v1,30,5,true
+s1_peaceful,llm_nospatial,10026,6,core,--model Qwen/Qwen3.8-27B-FP8-1M --prompt-version v1,30,5,true
+s1_peaceful,llm,10007,7,core,--model Qwen/Qwen3.8-27B-FP8-1M --prompt-version v1,30,5,true
+s1_peaceful,llm_minimal,10047,7,core,--model Qwen/Qwen3.8-27B-FP8-1M --prompt-version v1,30,5,true
+s1_peaceful,llm_nospatial,10027,7,core,--model Qwen/Qwen3.8-27B-FP8-1M --prompt-version v1,30,5,true
+s1_peaceful,llm,10008,8,core,--model Qwen/Qwen3.8-27B-FP8-1M --prompt-version v1,30,5,true
+s1_peaceful,llm_minimal,10048,8,core,--model Qwen/Qwen3.8-27B-FP8-1M --prompt-version v1,30,5,true
+s1_peaceful,llm_nospatial,10028,8,core,--model Qwen/Qwen3.8-27B-FP8-1M --prompt-version v1,30,5,true
+s1_peaceful,llm,10009,9,core,--model Qwen/Qwen3.8-27B-FP8-1M --prompt-version v1,30,5,true
+s1_peaceful,llm_minimal,10049,9,core,--model Qwen/Qwen3.8-27B-FP8-1M --prompt-version v1,30,5,true
+s1_peaceful,llm_nospatial,10029,9,core,--model Qwen/Qwen3.8-27B-FP8-1M --prompt-version v1,30,5,true
+s1_peaceful,llm,10010,10,core,--model Qwen/Qwen3.8-27B-FP8-1M --prompt-version v1,30,5,true
+s1_peaceful,llm_minimal,10050,10,core,--model Qwen/Qwen3.8-27B-FP8-1M --prompt-version v1,30,5,true
+s1_peaceful,llm_nospatial,10030,10,core,--model Qwen/Qwen3.8-27B-FP8-1M --prompt-version v1,30,5,true
+s1_peaceful,llm,10011,11,core,--model Qwen/Qwen3.8-27B-FP8-1M --prompt-version v1,30,5,true
+s1_peaceful,llm_nospatial,10031,11,core,--model Qwen/Qwen3.8-27B-FP8-1M --prompt-version v1,30,5,true
+s1_peaceful,llm,10012,12,core,--model Qwen/Qwen3.8-27B-FP8-1M --prompt-version v1,30,5,true
+s1_peaceful,llm_nospatial,10032,12,core,--model Qwen/Qwen3.8-27B-FP8-1M --prompt-version v1,30,5,true
+s1_peaceful,llm,10013,13,core,--model Qwen/Qwen3.8-27B-FP8-1M --prompt-version v1,30,5,true
+s1_peaceful,llm_nospatial,10033,13,core,--model Qwen/Qwen3.8-27B-FP8-1M --prompt-version v1,30,5,true
+s1_peaceful,llm,10014,14,core,--model Qwen/Qwen3.8-27B-FP8-1M --prompt-version v1,30,5,true
+s1_peaceful,llm_nospatial,10034,14,core,--model Qwen/Qwen3.8-27B-FP8-1M --prompt-version v1,30,5,true
+s1_peaceful,llm,10015,15,core,--model Qwen/Qwen3.8-27B-FP8-1M --prompt-version v1,30,5,true
+s1_peaceful,llm_nospatial,10035,15,core,--model Qwen/Qwen3.8-27B-FP8-1M --prompt-version v1,30,5,true
+s1_peaceful,llm,10016,16,core,--model Qwen/Qwen3.8-27B-FP8-1M --prompt-version v1,30,5,true
+s1_peaceful,llm_nospatial,10036,16,core,--model Qwen/Qwen3.8-27B-FP8-1M --prompt-version v1,30,5,true
+s1_peaceful,llm,10017,17,core,--model Qwen/Qwen3.8-27B-FP8-1M --prompt-version v1,30,5,true
+s1_peaceful,llm_nospatial,10037,17,core,--model Qwen/Qwen3.8-27B-FP8-1M --prompt-version v1,30,5,true
+s1_peaceful,llm,10018,18,core,--model Qwen/Qwen3.8-27B-FP8-1M --prompt-version v1,30,5,true
+s1_peaceful,llm_nospatial,10038,18,core,--model Qwen/Qwen3.8-27B-FP8-1M --prompt-version v1,30,5,true
+s1_peaceful,llm,10019,19,core,--model Qwen/Qwen3.8-27B-FP8-1M --prompt-version v1,30,5,true
+s1_peaceful,llm_nospatial,10039,19,core,--model Qwen/Qwen3.8-27B-FP8-1M --prompt-version v1,30,5,true
+s1_peaceful,llm,10020,20,core,--model Qwen/Qwen3.8-27B-FP8-1M --prompt-version v1,30,5,true
+s1_peaceful,llm_nospatial,10040,20,core,--model Qwen/Qwen3.8-27B-FP8-1M --prompt-version v1,30,5,true
+s3_daynight,llm,10116,1,core,--model Qwen/Qwen3.8-27B-FP8-1M --prompt-version v1,30,5,true
+s3_daynight,llm,10117,2,core,--model Qwen/Qwen3.8-27B-FP8-1M --prompt-version v1,30,5,true
+s3_daynight,llm,10118,3,core,--model Qwen/Qwen3.8-27B-FP8-1M --prompt-version v1,30,5,true
+s3_daynight,llm,10119,4,core,--model Qwen/Qwen3.8-27B-FP8-1M --prompt-version v1,30,5,true
+s3_daynight,llm,10120,5,core,--model Qwen/Qwen3.8-27B-FP8-1M --prompt-version v1,30,5,true
+s3_daynight,llm,10121,6,core,--model Qwen/Qwen3.8-27B-FP8-1M --prompt-version v1,30,5,true
+s3_daynight,llm,10122,7,core,--model Qwen/Qwen3.8-27B-FP8-1M --prompt-version v1,30,5,true
+s3_daynight,llm,10123,8,core,--model Qwen/Qwen3.8-27B-FP8-1M --prompt-version v1,30,5,true
+s3_daynight,llm,10124,9,core,--model Qwen/Qwen3.8-27B-FP8-1M --prompt-version v1,30,5,true
+s3_daynight,llm,10125,10,core,--model Qwen/Qwen3.8-27B-FP8-1M --prompt-version v1,30,5,true
+s2_stress,llm,10091,1,core,--model Qwen/Qwen3.8-27B-FP8-1M --prompt-version v1,30,5,true
+s2_stress,llm,10092,2,core,--model Qwen/Qwen3.8-27B-FP8-1M --prompt-version v1,30,5,true
+s2_stress,llm,10093,3,core,--model Qwen/Qwen3.8-27B-FP8-1M --prompt-version v1,30,5,true
+s2_stress,llm,10094,4,core,--model Qwen/Qwen3.8-27B-FP8-1M --prompt-version v1,30,5,true
+s2_stress,llm,10095,5,core,--model Qwen/Qwen3.8-27B-FP8-1M --prompt-version v1,30,5,true
+s2_stress,llm,10096,6,core,--model Qwen/Qwen3.8-27B-FP8-1M --prompt-version v1,30,5,true
+s2_stress,llm,10097,7,core,--model Qwen/Qwen3.8-27B-FP8-1M --prompt-version v1,30,5,true
+s2_stress,llm,10098,8,core,--model Qwen/Qwen3.8-27B-FP8-1M --prompt-version v1,30,5,true
+s2_stress,llm,10099,9,core,--model Qwen/Qwen3.8-27B-FP8-1M --prompt-version v1,30,5,true
+s2_stress,llm,10100,10,core,--model Qwen/Qwen3.8-27B-FP8-1M --prompt-version v1,30,5,true
+s4_adversarial,llm,10136,1,core,--model Qwen/Qwen3.8-27B-FP8-1M --prompt-version v1,30,5,true
+s4_adversarial,llm,10137,2,core,--model Qwen/Qwen3.8-27B-FP8-1M --prompt-version v1,30,5,true
+s4_adversarial,llm,10138,3,core,--model Qwen/Qwen3.8-27B-FP8-1M --prompt-version v1,30,5,true
+s4_adversarial,llm,10139,4,core,--model Qwen/Qwen3.8-27B-FP8-1M --prompt-version v1,30,5,true
+s4_adversarial,llm,10140,5,core,--model Qwen/Qwen3.8-27B-FP8-1M --prompt-version v1,30,5,true
+s4_adversarial,llm,10141,6,core,--model Qwen/Qwen3.8-27B-FP8-1M --prompt-version v1,30,5,true
+s4_adversarial,llm,10142,7,core,--model Qwen/Qwen3.8-27B-FP8-1M --prompt-version v1,30,5,true
+s4_adversarial,llm,10143,8,core,--model Qwen/Qwen3.8-27B-FP8-1M --prompt-version v1,30,5,true
+s4_adversarial,llm,10144,9,core,--model Qwen/Qwen3.8-27B-FP8-1M --prompt-version v1,30,5,true
+s4_adversarial,llm,10145,10,core,--model Qwen/Qwen3.8-27B-FP8-1M --prompt-version v1,30,5,true

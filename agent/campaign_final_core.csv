@@ -1,0 +1,18 @@
+scenario,backend,seed,replicate,tag,orch_args,duration,speed,autoplace,set
+# Final top-up A (core arms, NO LLM endpoint needed; results dir agent/results_v2): 10 more S1 no-op episodes (noop N=20) and 5 more S2 random episodes (N=10).
+# Run: python3 agent/campaign.py agent/campaign_final_core.csv --results-dir agent/results_v2 --parallel 1
+s1_peaceful,noop,10156,1,core,,30,5,true,
+s1_peaceful,noop,10157,2,core,,30,5,true,
+s1_peaceful,noop,10158,3,core,,30,5,true,
+s1_peaceful,noop,10159,4,core,,30,5,true,
+s1_peaceful,noop,10160,5,core,,30,5,true,
+s1_peaceful,noop,10161,6,core,,30,5,true,
+s1_peaceful,noop,10162,7,core,,30,5,true,
+s1_peaceful,noop,10163,8,core,,30,5,true,
+s1_peaceful,noop,10164,9,core,,30,5,true,
+s1_peaceful,noop,10165,10,core,,30,5,true,
+s2_stress,random,10166,1,core,,30,5,true,
+s2_stress,random,10167,2,core,,30,5,true,
+s2_stress,random,10168,3,core,,30,5,true,
+s2_stress,random,10169,4,core,,30,5,true,
+s2_stress,random,10170,5,core,,30,5,true,

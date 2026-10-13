@@ -1,0 +1,23 @@
+{
+  "record": "header",
+  "protocol": 2,
+  "orchestrator_version": "2.0",
+  "episode_id": "s1_peaceful_rule_e7_rulesnap_seed20426_20260930_075351",
+  "scenario": "s1_peaceful",
+  "backend": "rule",
+  "backend_arg": "rule",
+  "seed": 20426,
+  "team": 0,
+  "commit": "926e26757aa214db3f65625c3001187d0fc9df79",
+  "start_time": 1790747631.8948696,
+  "start_time_iso": "2026-09-30T07:53:51",
+  "host": "user-G7-7790",
+  "write_dir": "/tmp/bar_wd_0",
+  "game_log": "/media/user/Linux_data2/Programs/Beyond-All-Reason-master/agent/results_v2_ext/s1_peaceful_rule_e7_rulesnap_seed20426_20260930_075351/gamelog.txt",
+  "action_file": "/tmp/bar_wd_0/6g_agent_action.txt",
+  "expose_disconnected_positions": false,
+  "expose_buildable_grid": false,
+  "game_id": "40a4bc6acc4b10f9dce42ae4ae322b6b",
+  "decisions": 29,
+  "end_time": 1790748151.129071
+}

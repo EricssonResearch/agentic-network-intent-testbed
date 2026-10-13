@@ -1,0 +1,171 @@
+@startuml use_case_1_temporal
+title Use Case 1: Proactive Temporal Reasoning\n(Analogy 3: Planning Capability)
+
+skinparam sequenceMessageAlign center
+skinparam responseMessageBelowArrow true
+
+participant "Game\nEnvironment" as Env
+participant "State\nExport" as State
+participant "LLM Agent\n(DeepSeek-R1)" as Agent
+participant "Network\nInfrastructure" as Net
+
+== Decision #4 (t=240s) — Day phase, 179s until night ==
+
+Env -> State: Export state\n(cov=100%, phase=day,\nremaining=179s)
+State -> Agent: Query
+
+note right of Agent
+  **Agent reasoning:**
+  "Adjusting slice ratios to better
+  handle expected traffic shifts during
+  day/night transition and prevent
+  future QoS violations."
+end note
+
+Agent -> Net: reconfig_slice(BS1, eMBB=0.4, URLLC=0.5, mMTC=0.1)
+Net --> Env: Slice ratios updated
+
+== Night falls (t=300s) — Engineers return to housing ==
+
+Env -> Env: eMBB demand shifts\nto residential zones
+
+note over Net
+  QoS maintained ✓
+  (slice pre-configured
+  for housing eMBB load)
+end note
+
+== Dawn (t=360s) — Engineers commute back ==
+
+Env -> Env: eMBB demand shifts\nto corridors
+Env -> State: Export state\n(cov=100%, no violations)
+
+note over Agent #LightGreen
+  **Result:** No QoS violation
+  because agent anticipated
+  the demand shift.
+end note
+
+@enduml
+
+
+@startuml use_case_2_debugging
+title Use Case 2: Debugging Trace — Missed Opportunity\n(Analogy 1: Declarative Debugging)
+
+skinparam sequenceMessageAlign center
+
+participant "City Economy\n(STAI)" as City
+participant "Game\nEnvironment" as Env
+participant "State\nExport" as State
+participant "LLM Agent" as Agent
+participant "Network" as Net
+
+== Decision #5 (t=300s) — cov=100%, 0 disconnected ==
+
+City -> Env: +7 new units built\n(expanding outward)
+Env -> State: Export state\n(cov=100%, disc=0, phase=night)
+State -> Agent: Query
+Agent -> Net: **reconfig_slice**(BS1, 0.4, 0.4, 0.2)
+
+note right of Agent #Yellow
+  Agent chose reconfig
+  instead of placement.
+  **No coverage extension.**
+end note
+
+Net --> Env: Slice updated (no new coverage)
+
+== 60 seconds pass — units move beyond coverage ==
+
+City -> Env: Units expand to\nnew mex locations
+Env -> Env: 8 units now\noutside all BS range
+
+== Decision #6 (t=360s) — INTENT VIOLATION ==
+
+Env -> State: Export state\n**(cov=63%, disc=8)** ⚠️
+State -> Agent: Query
+
+note over State #LightCoral
+  **FAIL: Coverage dropped**
+  **100% → 63% in one step**
+  
+  Root cause:
+  • Units expanded +7
+  • All outside coverage
+  • Agent reconfigured instead
+    of extending coverage
+end note
+
+Agent -> Net: place_bs(macro_cell, 7328, 9048)
+
+note right of Agent
+  **Too late** — coverage
+  already violated for 60s
+end note
+
+== Backward Trace (Debugging) ==
+
+note over Agent #LightBlue
+  **Counter-factual:**
+  If place_bs at t=300s instead
+  of reconfig → estimated
+  coverage: ~85% (regret: 22%)
+end note
+
+@enduml
+
+
+@startuml use_case_3_spatial
+title Use Case 3: Spatial Reasoning Under Sustained Pressure\n(Analogy 2: Strategic Context Requirement)
+
+skinparam sequenceMessageAlign center
+
+participant "City Economy" as City
+participant "Environment" as Env
+participant "LLM Agent\n(full context)" as AgentFull
+participant "LLM Agent\n(no positions)" as AgentBlind
+participant "Network" as Net
+
+== Continuous expansion: t=960s, cov=57%, 141 disconnected ==
+
+City -> Env: Economy keeps\nexpanding outward\n(+5 units/min)
+
+Env -> AgentFull: State with BS positions:\n[BS1@(5320,9040), BS2@(6500,7800),\n BS3@(5384,7960)...]
+
+note right of AgentFull #LightGreen
+  "Extending coverage **north**
+  to reach disconnected units"
+  
+  → Reasons about WHERE gap is
+  → Places at (5320, 10040)
+  → Correct direction
+end note
+
+AgentFull -> Net: place_bs(macro, 5320, 10040)
+
+|||
+
+Env -> AgentBlind: State WITHOUT positions:\nonly "57% coverage, 141 disconnected"
+
+note right of AgentBlind #LightCoral
+  Cannot determine WHERE
+  the gap is.
+  
+  → Guesses position
+  → May overlap existing BS
+  → May miss the frontier
+end note
+
+AgentBlind -> Net: place_bs(macro, 7000, 8000)\n(overlaps existing coverage)
+
+|||
+
+note over Net
+  **Result after 30 min:**
+  Full context: 52.5% avg coverage
+  No positions: 46.6% avg coverage
+  
+  Δ = −5.9% (spatial info value)
+end note
+
+@enduml

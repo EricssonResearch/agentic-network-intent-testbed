@@ -1,0 +1,24 @@
+scenario,backend,seed,replicate,tag,orch_args,duration,speed,autoplace
+# --- Tier 1 core, S1 (fill seeds 1001.. per replicate; one row per episode) ---
+s1_peaceful,llm,1001,1,core,"--model Qwen/Qwen3.8-27B-FP8-1M --prompt-version v1",30,5,true
+s1_peaceful,llm_nospatial,1101,1,core,"--model Qwen/Qwen3.8-27B-FP8-1M --prompt-version v1",30,5,true
+s1_peaceful,llm_minimal,1201,1,core,"--model Qwen/Qwen3.8-27B-FP8-1M --prompt-version v1",30,5,true
+s1_peaceful,rule,1301,1,core,,30,5,true
+s1_peaceful,random,1401,1,core,,30,5,true
+s1_peaceful,noop,1501,1,core,,30,5,true
+# --- Tier 2 E1 multi-model (hosted) ---
+s1_peaceful,llm,2001,1,e1_gptoss,"--model openai/gpt-oss-120b --prompt-version v1",30,5,true
+# DeepSeek-V4-Flash timed out (182 s) and Kimi-K2.7-Code returned HTTP 500 on 27 Sep 2026 -- retest with a 1-token request before enabling:
+#s1_peaceful,llm,2101,1,e1_dsv4,"--model deepseek-ai/DeepSeek-V4-Flash-0731 --prompt-version v1",30,5,true
+s1_peaceful,llm,2201,1,e1_qwenflash,"--model Qwen/Qwen3.8-Flash-Next-FP8 --prompt-version v1",30,5,true
+# --- Tier 2 E1 small hosted model (served by the platform, 0.1 s per call on 27 Sep 2026; needs no Ollama) ---
+s1_peaceful,llm,2251,1,e1_fastctx4b,"--model Microsoft/FastContext-1.0-4B-RL --prompt-version v1",30,5,true
+# --- Tier 2 E1 small local models via Ollama on the host (company machine; see docker/README.md §5) ---
+s1_peaceful,llm,2301,1,e1_qwen3_8b,"--model qwen3:8b --url http://localhost:11434/v1/chat/completions --timeout 600",30,5,true
+s1_peaceful,llm,2401,1,e1_gemma3_12b,"--model gemma3:12b --url http://localhost:11434/v1/chat/completions --timeout 600",30,5,true
+# --- Tier 2 E2 prompt v2 with history ---
+s1_peaceful,llm,2501,1,e2_v2,"--model Qwen/Qwen3.8-27B-FP8-1M --prompt-version v2 --history 5",30,5,true
+# --- Tier 2 E3 autonomous layer off ---
+s1_peaceful,llm,2601,1,e3_noauto,"--model Qwen/Qwen3.8-27B-FP8-1M --prompt-version v1",30,5,false
+s1_peaceful,rule,2701,1,e3_noauto,,30,5,false
+s1_peaceful,noop,2801,1,e3_noauto,,30,5,false

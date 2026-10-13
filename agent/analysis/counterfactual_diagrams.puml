@@ -1,0 +1,159 @@
+@startuml counterfactual_architecture
+title Counter-Factual Replay Architecture\n(Exact Regret Computation via Checkpoint-and-Branch)
+
+skinparam componentStyle rectangle
+
+package "Original Experiment Run" {
+    [Game Engine] as GE
+    [Agent Bridge\n(gadget)] as AB
+    [LLM Agent] as LLM
+    [Decision Log\n(JSONL)] as LOG
+    database "Checkpoints\n(saves)" as SAVES
+}
+
+package "Branch Replay" {
+    [Game Engine\n(loaded from save)] as GE2
+    [Agent Bridge\n(alternative action)] as AB2
+    [Branch\nOrchestrator] as BO
+    [Branch Result\n(JSONL)] as BLOG
+}
+
+package "Analysis" {
+    [Regret\nCalculator] as RC
+    [Paper\nFigures] as FIG
+}
+
+GE --> AB : state every 60s
+AB --> LLM : query
+LLM --> AB : action
+AB --> GE : execute
+AB --> LOG : log decision
+AB --> SAVES : **SaveGame()**\nat each decision
+
+SAVES --> GE2 : LoadGame\n(from decision N)
+BO --> AB2 : inject\nalternative action
+AB2 --> GE2 : execute different action
+GE2 --> BLOG : log branch result
+
+LOG --> RC
+BLOG --> RC
+RC --> FIG : exact regret =\n|branch_coverage - original_coverage|
+
+note right of SAVES
+  **Per checkpoint:**
+  • Size: 5-20 MB
+  • Save time: <1s
+  • 30 saves per episode
+  • ~300 MB total
+end note
+
+note right of GE2
+  **Branch replay:**
+  • Load time: 30-60s
+  • Run time: remaining game
+  • Deterministic from save
+end note
+
+@enduml
+
+
+@startuml counterfactual_sequence
+title Counter-Factual Replay Sequence\n(Single Branch from Decision Point)
+
+participant "Original Run" as Orig
+participant "Checkpoint\nStorage" as Save
+participant "Branch Runner\n(script)" as Runner
+participant "Game Engine\n(branch)" as Branch
+participant "Alternative\nAgent" as Alt
+participant "Regret\nAnalysis" as Regret
+
+== Phase 1: Original Run (already completed) ==
+
+Orig -> Save: SaveGame("d05.sav")\nat decision #5
+note right of Save: State includes:\n• All unit positions\n• All RulesParams\n• Economy state\n• Map features
+
+Orig -> Orig: Continue with\noriginal action A\n→ final coverage = 38%
+
+== Phase 2: Identify Interesting Decision ==
+
+Regret -> Regret: Heuristic scan:\n"Decision #5 has highest\nestimated regret (9.3%)"
+
+== Phase 3: Branch Replay ==
+
+Runner -> Branch: Launch engine with\n--savegame d05.sav
+activate Branch
+
+Branch -> Branch: Load state\n(30-60s startup)
+
+Branch -> Alt: State at decision #5\n(same as original)
+
+note right of Alt
+  Alternative action B:
+  "place_bs|macro_cell|7000|9500"
+  (instead of original noop)
+end note
+
+Alt -> Branch: Action B
+
+Branch -> Branch: Execute action B\n+ continue with same\nagent for D6-D29
+
+Branch -> Branch: Run to completion\n(~20 min remaining)
+
+Branch --> Runner: Final coverage = 52%
+deactivate Branch
+
+== Phase 4: Exact Regret ==
+
+Runner -> Regret: Branch result: 52%
+Regret -> Regret: **Exact regret =**\n**52% - 38% = 14%**\n\n(vs heuristic estimate: 9.3%)
+
+note over Regret
+  Validates heuristic accuracy:
+  • Heuristic said 9.3%
+  • Exact says 14%
+  • Heuristic is conservative
+    (underestimates true regret)
+end note
+
+@enduml
+
+
+@startuml counterfactual_workflow
+title Practical Workflow: When to Use Heuristic vs Exact Replay
+
+skinparam activityDiamondBackgroundColor #FFF8E1
+skinparam activityBackgroundColor #E3F2FD
+
+start
+
+:Run full experiment\n(N=10 episodes, 29 decisions each);
+
+:Compute heuristic regret\nfor ALL 290 decisions\n(takes: 2 seconds);
+
+if (Any decision with\nregret > 10%?) then (yes)
+    :Identify top-3 highest\nregret decisions;
+    
+    :Load checkpoint for\neach interesting decision;
+    
+    :Run 3 branch replays\n(takes: ~1 hour total);
+    
+    :Compute exact regret;
+    
+    :Report both:\n• Heuristic (all decisions)\n• Exact (top-3 validated);
+else (no)
+    :Report heuristic only\n(all regrets < 10%\nmeaning good planning);
+endif
+
+:Generate paper figures;
+
+stop
+
+note right
+  **Cost comparison:**
+  • Heuristic: 290 decisions in 2s
+  • Exact: 3 replays × 20min = 1h
+  • Ratio: 1800x faster for batch
+  • Exact used only for validation
+end note
+
+@enduml

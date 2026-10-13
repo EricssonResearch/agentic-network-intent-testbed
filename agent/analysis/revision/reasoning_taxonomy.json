@@ -1,0 +1,154 @@
+{
+  "version": "revision-2026-09-27",
+  "description": "Keyword dictionary for multi-label classification of the LLM's free-text reasoning comment (the text after '#' in the action line). Seeded from the June 2026 script agent/analysis/reasoning_quality.py (CATEGORIES); 'threat' is new; 'capacity' kept from the legacy set. A decision receives every category whose keyword list matches (multi-label). 'legacy' keywords reproduce the June classifier exactly; 'added' keywords are revision additions that the author must confirm. Matching mode 'substring' is the legacy behaviour (case-insensitive substring; note that 'day' also matches 'today', 'load' matches 'download'); 'word' matches whole words / word prefixes and is the recommended mode for the paper if the author accepts the deviation from the June classifier.",
+  "match": "substring",
+  "case_insensitive": true,
+  "error_prefixes": [
+    "error",
+    "error:"
+  ],
+  "categories": {
+    "spatial": {
+      "description": "Position-aware reasoning: where to place, relative to existing BS, frontier, direction, gaps.",
+      "legacy": [
+        "near",
+        "position",
+        "area",
+        "zone",
+        "frontier",
+        "expansion",
+        "direction",
+        "outward",
+        "between",
+        "coverage gap"
+      ],
+      "added": [
+        "north",
+        "south",
+        "east",
+        "west",
+        "toward",
+        "location",
+        "cluster",
+        "edge",
+        "gap"
+      ]
+    },
+    "reactive": {
+      "description": "Coverage/violation-triggered reasoning: reacting to the current KPI state.",
+      "legacy": [
+        "below 80",
+        "disconnected",
+        "overload",
+        "violation",
+        "drop",
+        "insufficient"
+      ],
+      "added": [
+        "coverage is",
+        "coverage at",
+        "coverage has",
+        "coverage fell",
+        "low coverage",
+        "units are disconnected"
+      ]
+    },
+    "temporal": {
+      "description": "Anticipation of the day/night cycle or future demand; proactive planning.",
+      "legacy": [
+        "dawn",
+        "dusk",
+        "night",
+        "day",
+        "cycle",
+        "periodic",
+        "preparing",
+        "anticipat"
+      ],
+      "added": [
+        "upcoming",
+        "ahead of",
+        "before the",
+        "soon",
+        "future",
+        "prepare",
+        "proactive",
+        "in advance",
+        "demand growth"
+      ]
+    },
+    "resource": {
+      "description": "Budget / economy considerations (metal, income, cost, waiting for resources).",
+      "legacy": [
+        "budget",
+        "metal",
+        "income",
+        "afford",
+        "cost",
+        "wait",
+        "insufficient budget"
+      ],
+      "added": [
+        "resource",
+        "economy",
+        "build speed"
+      ]
+    },
+    "capacity": {
+      "description": "Load / slice / reconfiguration reasoning (capacity management).",
+      "legacy": [
+        "load",
+        "utilization",
+        "slice",
+        "reconfig",
+        "balance"
+      ],
+      "added": [
+        "urllc",
+        "embb",
+        "mmtc",
+        "capacity",
+        "rebalanc",
+        "allocation",
+        "offload"
+      ]
+    },
+    "noop_justified": {
+      "description": "Explicit justification for not acting (state deemed sufficient/stable).",
+      "legacy": [
+        "no action",
+        "noop",
+        "sufficient",
+        "stable",
+        "no immediate"
+      ],
+      "added": [
+        "no need",
+        "not necessary",
+        "unnecessary",
+        "no changes",
+        "adequate",
+        "is full",
+        "100%"
+      ]
+    },
+    "threat": {
+      "description": "Enemy / threat-zone awareness (S4 adversarial; safety of the network engineer).",
+      "legacy": [],
+      "added": [
+        "threat",
+        "enemy",
+        "hostile",
+        "danger",
+        "unsafe",
+        "attack",
+        "military",
+        "combat",
+        "destroy",
+        "safe distance",
+        "away from"
+      ]
+    }
+  },
+  "valid_reasoning_definition": "A decision has 'valid reasoning' iff its reasoning text is non-empty after stripping, does not start with an error prefix (orchestrator API/HTTP error placeholder), and matches at least one taxonomy category."
+}

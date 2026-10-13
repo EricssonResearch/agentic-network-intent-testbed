@@ -1,0 +1,22 @@
+{
+  "record": "header",
+  "protocol": 2,
+  "orchestrator_version": "2.0",
+  "episode_id": "s1_peaceful_noop_core_seed10086_20260927_161139",
+  "scenario": "s1_peaceful",
+  "backend": "noop",
+  "backend_arg": "noop",
+  "seed": 10086,
+  "team": 0,
+  "commit": "90f8c9795533ed60ee623e7abe4e1065bba742dc",
+  "start_time": 1790518299.4459882,
+  "start_time_iso": "2026-09-27T16:11:39",
+  "host": "user-G7-7790",
+  "write_dir": "/tmp/bar_wd_0",
+  "game_log": "/media/user/Linux_data2/Programs/Beyond-All-Reason-master/agent/results_v2/s1_peaceful_noop_core_seed10086_20260927_161139/gamelog.txt",
+  "action_file": "/tmp/bar_wd_0/6g_agent_action.txt",
+  "expose_disconnected_positions": false,
+  "game_id": "2624b96a23c783947c98d2fa44fd063b",
+  "decisions": 29,
+  "end_time": 1790518733.6335595
+}

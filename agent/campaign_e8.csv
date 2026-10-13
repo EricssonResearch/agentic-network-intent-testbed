@@ -1,0 +1,44 @@
+scenario,backend,seed,replicate,tag,orch_args,duration,speed,autoplace,set
+# E8 decision support (candidate positions computed by the orchestrator from the logged disconnected positions + buildable grid):
+# e8_cand = LLM with ranked candidates in the observation (prompt v1c); e8_candfb = + validation/coverage feedback on the previous decision;
+# e8_greedy = deterministic baseline taking the first candidate (no LLM). Seeds 20501-20540. Results dir: agent/results_v2_ext.
+s1_peaceful,llm,20501,1,e8_cand,"--model Qwen/Qwen3.8-27B-FP8-1M --prompt-version v1c --candidates",30,5,true,6g_agent_buildable_grid=true
+s1_peaceful,llm,20502,1,e8_cand,"--model Qwen/Qwen3.8-27B-FP8-1M --prompt-version v1c --candidates",30,5,true,6g_agent_buildable_grid=true
+s1_peaceful,llm,20503,1,e8_cand,"--model Qwen/Qwen3.8-27B-FP8-1M --prompt-version v1c --candidates",30,5,true,6g_agent_buildable_grid=true
+s1_peaceful,llm,20504,1,e8_cand,"--model Qwen/Qwen3.8-27B-FP8-1M --prompt-version v1c --candidates",30,5,true,6g_agent_buildable_grid=true
+s1_peaceful,llm,20505,1,e8_cand,"--model Qwen/Qwen3.8-27B-FP8-1M --prompt-version v1c --candidates",30,5,true,6g_agent_buildable_grid=true
+s1_peaceful,llm,20506,1,e8_cand,"--model Qwen/Qwen3.8-27B-FP8-1M --prompt-version v1c --candidates",30,5,true,6g_agent_buildable_grid=true
+s1_peaceful,llm,20507,1,e8_cand,"--model Qwen/Qwen3.8-27B-FP8-1M --prompt-version v1c --candidates",30,5,true,6g_agent_buildable_grid=true
+s1_peaceful,llm,20508,1,e8_cand,"--model Qwen/Qwen3.8-27B-FP8-1M --prompt-version v1c --candidates",30,5,true,6g_agent_buildable_grid=true
+s1_peaceful,llm,20509,1,e8_cand,"--model Qwen/Qwen3.8-27B-FP8-1M --prompt-version v1c --candidates",30,5,true,6g_agent_buildable_grid=true
+s1_peaceful,llm,20510,1,e8_cand,"--model Qwen/Qwen3.8-27B-FP8-1M --prompt-version v1c --candidates",30,5,true,6g_agent_buildable_grid=true
+s1_peaceful,llm,20511,1,e8_candfb,"--model Qwen/Qwen3.8-27B-FP8-1M --prompt-version v1c --candidates --feedback",30,5,true,6g_agent_buildable_grid=true
+s1_peaceful,llm,20512,1,e8_candfb,"--model Qwen/Qwen3.8-27B-FP8-1M --prompt-version v1c --candidates --feedback",30,5,true,6g_agent_buildable_grid=true
+s1_peaceful,llm,20513,1,e8_candfb,"--model Qwen/Qwen3.8-27B-FP8-1M --prompt-version v1c --candidates --feedback",30,5,true,6g_agent_buildable_grid=true
+s1_peaceful,llm,20514,1,e8_candfb,"--model Qwen/Qwen3.8-27B-FP8-1M --prompt-version v1c --candidates --feedback",30,5,true,6g_agent_buildable_grid=true
+s1_peaceful,llm,20515,1,e8_candfb,"--model Qwen/Qwen3.8-27B-FP8-1M --prompt-version v1c --candidates --feedback",30,5,true,6g_agent_buildable_grid=true
+s1_peaceful,llm,20516,1,e8_candfb,"--model Qwen/Qwen3.8-27B-FP8-1M --prompt-version v1c --candidates --feedback",30,5,true,6g_agent_buildable_grid=true
+s1_peaceful,llm,20517,1,e8_candfb,"--model Qwen/Qwen3.8-27B-FP8-1M --prompt-version v1c --candidates --feedback",30,5,true,6g_agent_buildable_grid=true
+s1_peaceful,llm,20518,1,e8_candfb,"--model Qwen/Qwen3.8-27B-FP8-1M --prompt-version v1c --candidates --feedback",30,5,true,6g_agent_buildable_grid=true
+s1_peaceful,llm,20519,1,e8_candfb,"--model Qwen/Qwen3.8-27B-FP8-1M --prompt-version v1c --candidates --feedback",30,5,true,6g_agent_buildable_grid=true
+s1_peaceful,llm,20520,1,e8_candfb,"--model Qwen/Qwen3.8-27B-FP8-1M --prompt-version v1c --candidates --feedback",30,5,true,6g_agent_buildable_grid=true
+s1_peaceful,greedy,20521,1,e8_greedy,,30,5,true,6g_agent_buildable_grid=true
+s1_peaceful,greedy,20522,1,e8_greedy,,30,5,true,6g_agent_buildable_grid=true
+s1_peaceful,greedy,20523,1,e8_greedy,,30,5,true,6g_agent_buildable_grid=true
+s1_peaceful,greedy,20524,1,e8_greedy,,30,5,true,6g_agent_buildable_grid=true
+s1_peaceful,greedy,20525,1,e8_greedy,,30,5,true,6g_agent_buildable_grid=true
+s1_peaceful,greedy,20526,1,e8_greedy,,30,5,true,6g_agent_buildable_grid=true
+s1_peaceful,greedy,20527,1,e8_greedy,,30,5,true,6g_agent_buildable_grid=true
+s1_peaceful,greedy,20528,1,e8_greedy,,30,5,true,6g_agent_buildable_grid=true
+s1_peaceful,greedy,20529,1,e8_greedy,,30,5,true,6g_agent_buildable_grid=true
+s1_peaceful,greedy,20530,1,e8_greedy,,30,5,true,6g_agent_buildable_grid=true
+s3_daynight,llm,20531,1,e8_cand,"--model Qwen/Qwen3.8-27B-FP8-1M --prompt-version v1c --candidates",30,5,true,6g_agent_buildable_grid=true
+s3_daynight,llm,20532,1,e8_cand,"--model Qwen/Qwen3.8-27B-FP8-1M --prompt-version v1c --candidates",30,5,true,6g_agent_buildable_grid=true
+s3_daynight,llm,20533,1,e8_cand,"--model Qwen/Qwen3.8-27B-FP8-1M --prompt-version v1c --candidates",30,5,true,6g_agent_buildable_grid=true
+s3_daynight,llm,20534,1,e8_cand,"--model Qwen/Qwen3.8-27B-FP8-1M --prompt-version v1c --candidates",30,5,true,6g_agent_buildable_grid=true
+s3_daynight,llm,20535,1,e8_cand,"--model Qwen/Qwen3.8-27B-FP8-1M --prompt-version v1c --candidates",30,5,true,6g_agent_buildable_grid=true
+s3_daynight,llm,20536,1,e8_cand,"--model Qwen/Qwen3.8-27B-FP8-1M --prompt-version v1c --candidates",30,5,true,6g_agent_buildable_grid=true
+s3_daynight,llm,20537,1,e8_cand,"--model Qwen/Qwen3.8-27B-FP8-1M --prompt-version v1c --candidates",30,5,true,6g_agent_buildable_grid=true
+s3_daynight,llm,20538,1,e8_cand,"--model Qwen/Qwen3.8-27B-FP8-1M --prompt-version v1c --candidates",30,5,true,6g_agent_buildable_grid=true
+s3_daynight,llm,20539,1,e8_cand,"--model Qwen/Qwen3.8-27B-FP8-1M --prompt-version v1c --candidates",30,5,true,6g_agent_buildable_grid=true
+s3_daynight,llm,20540,1,e8_cand,"--model Qwen/Qwen3.8-27B-FP8-1M --prompt-version v1c --candidates",30,5,true,6g_agent_buildable_grid=true

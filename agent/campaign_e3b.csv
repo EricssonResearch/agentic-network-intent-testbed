@@ -1,0 +1,19 @@
+scenario,backend,seed,replicate,tag,orch_args,duration,speed,autoplace,set
+# E3 top-up (optional): 5 more no-op and 10 more LLM episodes with the autonomous layer disabled (same tag e3_noauto -> pooled with agent/campaign_ext.csv arms: noop N=10, LLM N=20).
+# Purpose: the abstract's 'LLM adds 6.3 pp without autonomy' rests on noop N=5 (Welch p=0.039, permutation p=0.068). No-op rows need no LLM endpoint.
+# Run: python3 agent/campaign.py agent/campaign_e3b.csv --results-dir agent/results_v2_ext --parallel 1
+s1_peaceful,noop,20801,1,e3_noauto,,30,5,false,
+s1_peaceful,noop,20802,2,e3_noauto,,30,5,false,
+s1_peaceful,noop,20803,3,e3_noauto,,30,5,false,
+s1_peaceful,noop,20804,4,e3_noauto,,30,5,false,
+s1_peaceful,noop,20805,5,e3_noauto,,30,5,false,
+s1_peaceful,llm,20811,1,e3_noauto,"--model Qwen/Qwen3.8-27B-FP8-1M --prompt-version v1",30,5,false,
+s1_peaceful,llm,20812,2,e3_noauto,"--model Qwen/Qwen3.8-27B-FP8-1M --prompt-version v1",30,5,false,
+s1_peaceful,llm,20813,3,e3_noauto,"--model Qwen/Qwen3.8-27B-FP8-1M --prompt-version v1",30,5,false,
+s1_peaceful,llm,20814,4,e3_noauto,"--model Qwen/Qwen3.8-27B-FP8-1M --prompt-version v1",30,5,false,
+s1_peaceful,llm,20815,5,e3_noauto,"--model Qwen/Qwen3.8-27B-FP8-1M --prompt-version v1",30,5,false,
+s1_peaceful,llm,20816,6,e3_noauto,"--model Qwen/Qwen3.8-27B-FP8-1M --prompt-version v1",30,5,false,
+s1_peaceful,llm,20817,7,e3_noauto,"--model Qwen/Qwen3.8-27B-FP8-1M --prompt-version v1",30,5,false,
+s1_peaceful,llm,20818,8,e3_noauto,"--model Qwen/Qwen3.8-27B-FP8-1M --prompt-version v1",30,5,false,
+s1_peaceful,llm,20819,9,e3_noauto,"--model Qwen/Qwen3.8-27B-FP8-1M --prompt-version v1",30,5,false,
+s1_peaceful,llm,20820,10,e3_noauto,"--model Qwen/Qwen3.8-27B-FP8-1M --prompt-version v1",30,5,false,

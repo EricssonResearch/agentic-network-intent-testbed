@@ -1,0 +1,22 @@
+{
+  "record": "header",
+  "protocol": 2,
+  "orchestrator_version": "2.0",
+  "episode_id": "s1_peaceful_random_core_seed10073_20260927_170637",
+  "scenario": "s1_peaceful",
+  "backend": "random",
+  "backend_arg": "random",
+  "seed": 10073,
+  "team": 0,
+  "commit": "90f8c9795533ed60ee623e7abe4e1065bba742dc",
+  "start_time": 1790521597.2303617,
+  "start_time_iso": "2026-09-27T17:06:37",
+  "host": "user-G7-7790",
+  "write_dir": "/tmp/bar_wd_0",
+  "game_log": "/media/user/Linux_data2/Programs/Beyond-All-Reason-master/agent/results_v2/s1_peaceful_random_core_seed10073_20260927_170637/gamelog.txt",
+  "action_file": "/tmp/bar_wd_0/6g_agent_action.txt",
+  "expose_disconnected_positions": false,
+  "game_id": "0831b96a09575b57f86c8055a0d182d8",
+  "decisions": 29,
+  "end_time": 1790522130.5792656
+}

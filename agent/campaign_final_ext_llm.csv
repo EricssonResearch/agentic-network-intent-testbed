@@ -1,0 +1,55 @@
+scenario,backend,seed,replicate,tag,orch_args,duration,speed,autoplace,set
+# Final top-up C (LLM endpoint / tunnel needed; results dir agent/results_v2_ext):
+#  20 more primary-model episodes with thinking ON (E9 N=30, ~20 min each), 5 more LLM episodes at path-loss exponent 2.0 and 5 at 4.0 (E5 LLM arms N=10),
+#  10 more gpt-oss-120b low-effort episodes on S1 (E1 N=20) and 10 more at high effort (E9 N=20). About 13 h in total.
+# Run: python3 agent/campaign.py agent/campaign_final_ext_llm.csv --results-dir agent/results_v2_ext --parallel 1
+s1_peaceful,llm,20861,1,e5_pl2,"--model Qwen/Qwen3.8-27B-FP8-1M --prompt-version v1",30,5,true,6g_path_loss_exponent=2.0
+s1_peaceful,llm,20862,2,e5_pl2,"--model Qwen/Qwen3.8-27B-FP8-1M --prompt-version v1",30,5,true,6g_path_loss_exponent=2.0
+s1_peaceful,llm,20863,3,e5_pl2,"--model Qwen/Qwen3.8-27B-FP8-1M --prompt-version v1",30,5,true,6g_path_loss_exponent=2.0
+s1_peaceful,llm,20864,4,e5_pl2,"--model Qwen/Qwen3.8-27B-FP8-1M --prompt-version v1",30,5,true,6g_path_loss_exponent=2.0
+s1_peaceful,llm,20865,5,e5_pl2,"--model Qwen/Qwen3.8-27B-FP8-1M --prompt-version v1",30,5,true,6g_path_loss_exponent=2.0
+s1_peaceful,llm,20866,1,e5_pl4,"--model Qwen/Qwen3.8-27B-FP8-1M --prompt-version v1",30,5,true,6g_path_loss_exponent=4.0
+s1_peaceful,llm,20867,2,e5_pl4,"--model Qwen/Qwen3.8-27B-FP8-1M --prompt-version v1",30,5,true,6g_path_loss_exponent=4.0
+s1_peaceful,llm,20868,3,e5_pl4,"--model Qwen/Qwen3.8-27B-FP8-1M --prompt-version v1",30,5,true,6g_path_loss_exponent=4.0
+s1_peaceful,llm,20869,4,e5_pl4,"--model Qwen/Qwen3.8-27B-FP8-1M --prompt-version v1",30,5,true,6g_path_loss_exponent=4.0
+s1_peaceful,llm,20870,5,e5_pl4,"--model Qwen/Qwen3.8-27B-FP8-1M --prompt-version v1",30,5,true,6g_path_loss_exponent=4.0
+s1_peaceful,llm,20871,1,e1_gptoss,"--model openai/gpt-oss-120b --prompt-version v1",30,5,true,
+s1_peaceful,llm,20872,2,e1_gptoss,"--model openai/gpt-oss-120b --prompt-version v1",30,5,true,
+s1_peaceful,llm,20873,3,e1_gptoss,"--model openai/gpt-oss-120b --prompt-version v1",30,5,true,
+s1_peaceful,llm,20874,4,e1_gptoss,"--model openai/gpt-oss-120b --prompt-version v1",30,5,true,
+s1_peaceful,llm,20875,5,e1_gptoss,"--model openai/gpt-oss-120b --prompt-version v1",30,5,true,
+s1_peaceful,llm,20876,6,e1_gptoss,"--model openai/gpt-oss-120b --prompt-version v1",30,5,true,
+s1_peaceful,llm,20877,7,e1_gptoss,"--model openai/gpt-oss-120b --prompt-version v1",30,5,true,
+s1_peaceful,llm,20878,8,e1_gptoss,"--model openai/gpt-oss-120b --prompt-version v1",30,5,true,
+s1_peaceful,llm,20879,9,e1_gptoss,"--model openai/gpt-oss-120b --prompt-version v1",30,5,true,
+s1_peaceful,llm,20880,10,e1_gptoss,"--model openai/gpt-oss-120b --prompt-version v1",30,5,true,
+s1_peaceful,llm,20881,1,e9_gptoss_high,"--model openai/gpt-oss-120b --prompt-version v1 --max-tokens 16000 --timeout 400 --extra-body {""reasoning_effort"":""high""}",30,5,true,
+s1_peaceful,llm,20882,2,e9_gptoss_high,"--model openai/gpt-oss-120b --prompt-version v1 --max-tokens 16000 --timeout 400 --extra-body {""reasoning_effort"":""high""}",30,5,true,
+s1_peaceful,llm,20883,3,e9_gptoss_high,"--model openai/gpt-oss-120b --prompt-version v1 --max-tokens 16000 --timeout 400 --extra-body {""reasoning_effort"":""high""}",30,5,true,
+s1_peaceful,llm,20884,4,e9_gptoss_high,"--model openai/gpt-oss-120b --prompt-version v1 --max-tokens 16000 --timeout 400 --extra-body {""reasoning_effort"":""high""}",30,5,true,
+s1_peaceful,llm,20885,5,e9_gptoss_high,"--model openai/gpt-oss-120b --prompt-version v1 --max-tokens 16000 --timeout 400 --extra-body {""reasoning_effort"":""high""}",30,5,true,
+s1_peaceful,llm,20886,6,e9_gptoss_high,"--model openai/gpt-oss-120b --prompt-version v1 --max-tokens 16000 --timeout 400 --extra-body {""reasoning_effort"":""high""}",30,5,true,
+s1_peaceful,llm,20887,7,e9_gptoss_high,"--model openai/gpt-oss-120b --prompt-version v1 --max-tokens 16000 --timeout 400 --extra-body {""reasoning_effort"":""high""}",30,5,true,
+s1_peaceful,llm,20888,8,e9_gptoss_high,"--model openai/gpt-oss-120b --prompt-version v1 --max-tokens 16000 --timeout 400 --extra-body {""reasoning_effort"":""high""}",30,5,true,
+s1_peaceful,llm,20889,9,e9_gptoss_high,"--model openai/gpt-oss-120b --prompt-version v1 --max-tokens 16000 --timeout 400 --extra-body {""reasoning_effort"":""high""}",30,5,true,
+s1_peaceful,llm,20890,10,e9_gptoss_high,"--model openai/gpt-oss-120b --prompt-version v1 --max-tokens 16000 --timeout 400 --extra-body {""reasoning_effort"":""high""}",30,5,true,
+s1_peaceful,llm,20831,1,e9_think,"--model Qwen/Qwen3.8-27B-FP8-1M --prompt-version v1 --max-tokens 16000 --timeout 400 --extra-body {""enable_thinking"":true}",30,5,true,
+s1_peaceful,llm,20832,2,e9_think,"--model Qwen/Qwen3.8-27B-FP8-1M --prompt-version v1 --max-tokens 16000 --timeout 400 --extra-body {""enable_thinking"":true}",30,5,true,
+s1_peaceful,llm,20833,3,e9_think,"--model Qwen/Qwen3.8-27B-FP8-1M --prompt-version v1 --max-tokens 16000 --timeout 400 --extra-body {""enable_thinking"":true}",30,5,true,
+s1_peaceful,llm,20834,4,e9_think,"--model Qwen/Qwen3.8-27B-FP8-1M --prompt-version v1 --max-tokens 16000 --timeout 400 --extra-body {""enable_thinking"":true}",30,5,true,
+s1_peaceful,llm,20835,5,e9_think,"--model Qwen/Qwen3.8-27B-FP8-1M --prompt-version v1 --max-tokens 16000 --timeout 400 --extra-body {""enable_thinking"":true}",30,5,true,
+s1_peaceful,llm,20836,6,e9_think,"--model Qwen/Qwen3.8-27B-FP8-1M --prompt-version v1 --max-tokens 16000 --timeout 400 --extra-body {""enable_thinking"":true}",30,5,true,
+s1_peaceful,llm,20837,7,e9_think,"--model Qwen/Qwen3.8-27B-FP8-1M --prompt-version v1 --max-tokens 16000 --timeout 400 --extra-body {""enable_thinking"":true}",30,5,true,
+s1_peaceful,llm,20838,8,e9_think,"--model Qwen/Qwen3.8-27B-FP8-1M --prompt-version v1 --max-tokens 16000 --timeout 400 --extra-body {""enable_thinking"":true}",30,5,true,
+s1_peaceful,llm,20839,9,e9_think,"--model Qwen/Qwen3.8-27B-FP8-1M --prompt-version v1 --max-tokens 16000 --timeout 400 --extra-body {""enable_thinking"":true}",30,5,true,
+s1_peaceful,llm,20840,10,e9_think,"--model Qwen/Qwen3.8-27B-FP8-1M --prompt-version v1 --max-tokens 16000 --timeout 400 --extra-body {""enable_thinking"":true}",30,5,true,
+s1_peaceful,llm,20841,11,e9_think,"--model Qwen/Qwen3.8-27B-FP8-1M --prompt-version v1 --max-tokens 16000 --timeout 400 --extra-body {""enable_thinking"":true}",30,5,true,
+s1_peaceful,llm,20842,12,e9_think,"--model Qwen/Qwen3.8-27B-FP8-1M --prompt-version v1 --max-tokens 16000 --timeout 400 --extra-body {""enable_thinking"":true}",30,5,true,
+s1_peaceful,llm,20843,13,e9_think,"--model Qwen/Qwen3.8-27B-FP8-1M --prompt-version v1 --max-tokens 16000 --timeout 400 --extra-body {""enable_thinking"":true}",30,5,true,
+s1_peaceful,llm,20844,14,e9_think,"--model Qwen/Qwen3.8-27B-FP8-1M --prompt-version v1 --max-tokens 16000 --timeout 400 --extra-body {""enable_thinking"":true}",30,5,true,
+s1_peaceful,llm,20845,15,e9_think,"--model Qwen/Qwen3.8-27B-FP8-1M --prompt-version v1 --max-tokens 16000 --timeout 400 --extra-body {""enable_thinking"":true}",30,5,true,
+s1_peaceful,llm,20846,16,e9_think,"--model Qwen/Qwen3.8-27B-FP8-1M --prompt-version v1 --max-tokens 16000 --timeout 400 --extra-body {""enable_thinking"":true}",30,5,true,
+s1_peaceful,llm,20847,17,e9_think,"--model Qwen/Qwen3.8-27B-FP8-1M --prompt-version v1 --max-tokens 16000 --timeout 400 --extra-body {""enable_thinking"":true}",30,5,true,
+s1_peaceful,llm,20848,18,e9_think,"--model Qwen/Qwen3.8-27B-FP8-1M --prompt-version v1 --max-tokens 16000 --timeout 400 --extra-body {""enable_thinking"":true}",30,5,true,
+s1_peaceful,llm,20849,19,e9_think,"--model Qwen/Qwen3.8-27B-FP8-1M --prompt-version v1 --max-tokens 16000 --timeout 400 --extra-body {""enable_thinking"":true}",30,5,true,
+s1_peaceful,llm,20850,20,e9_think,"--model Qwen/Qwen3.8-27B-FP8-1M --prompt-version v1 --max-tokens 16000 --timeout 400 --extra-body {""enable_thinking"":true}",30,5,true,

@@ -1,0 +1,34 @@
+scenario,backend,seed,replicate,tag,orch_args,duration,speed,autoplace,set
+# E7 grounding aids for the intent agent (S1): e7_snap = LLM with rejected placements snapped to the nearest buildable cell;
+# e7_grid = LLM with the buildable-terrain map in the observation + grounding guidance (prompt v1g) + snapping;
+# e7_rulesnap = rule agent with snapping (control, no LLM needed). Seeds 20401-20430. Results dir: agent/results_v2_ext.
+s1_peaceful,llm,20401,1,e7_snap,"--model Qwen/Qwen3.8-27B-FP8-1M --prompt-version v1",30,5,true,6g_agent_snap_to_buildable=true
+s1_peaceful,llm,20402,1,e7_snap,"--model Qwen/Qwen3.8-27B-FP8-1M --prompt-version v1",30,5,true,6g_agent_snap_to_buildable=true
+s1_peaceful,llm,20403,1,e7_snap,"--model Qwen/Qwen3.8-27B-FP8-1M --prompt-version v1",30,5,true,6g_agent_snap_to_buildable=true
+s1_peaceful,llm,20404,1,e7_snap,"--model Qwen/Qwen3.8-27B-FP8-1M --prompt-version v1",30,5,true,6g_agent_snap_to_buildable=true
+s1_peaceful,llm,20405,1,e7_snap,"--model Qwen/Qwen3.8-27B-FP8-1M --prompt-version v1",30,5,true,6g_agent_snap_to_buildable=true
+s1_peaceful,llm,20406,1,e7_snap,"--model Qwen/Qwen3.8-27B-FP8-1M --prompt-version v1",30,5,true,6g_agent_snap_to_buildable=true
+s1_peaceful,llm,20407,1,e7_snap,"--model Qwen/Qwen3.8-27B-FP8-1M --prompt-version v1",30,5,true,6g_agent_snap_to_buildable=true
+s1_peaceful,llm,20408,1,e7_snap,"--model Qwen/Qwen3.8-27B-FP8-1M --prompt-version v1",30,5,true,6g_agent_snap_to_buildable=true
+s1_peaceful,llm,20409,1,e7_snap,"--model Qwen/Qwen3.8-27B-FP8-1M --prompt-version v1",30,5,true,6g_agent_snap_to_buildable=true
+s1_peaceful,llm,20410,1,e7_snap,"--model Qwen/Qwen3.8-27B-FP8-1M --prompt-version v1",30,5,true,6g_agent_snap_to_buildable=true
+s1_peaceful,llm,20411,1,e7_grid,"--model Qwen/Qwen3.8-27B-FP8-1M --prompt-version v1g --expose-buildable-grid",30,5,true,6g_agent_buildable_grid=true;6g_agent_snap_to_buildable=true
+s1_peaceful,llm,20412,1,e7_grid,"--model Qwen/Qwen3.8-27B-FP8-1M --prompt-version v1g --expose-buildable-grid",30,5,true,6g_agent_buildable_grid=true;6g_agent_snap_to_buildable=true
+s1_peaceful,llm,20413,1,e7_grid,"--model Qwen/Qwen3.8-27B-FP8-1M --prompt-version v1g --expose-buildable-grid",30,5,true,6g_agent_buildable_grid=true;6g_agent_snap_to_buildable=true
+s1_peaceful,llm,20414,1,e7_grid,"--model Qwen/Qwen3.8-27B-FP8-1M --prompt-version v1g --expose-buildable-grid",30,5,true,6g_agent_buildable_grid=true;6g_agent_snap_to_buildable=true
+s1_peaceful,llm,20415,1,e7_grid,"--model Qwen/Qwen3.8-27B-FP8-1M --prompt-version v1g --expose-buildable-grid",30,5,true,6g_agent_buildable_grid=true;6g_agent_snap_to_buildable=true
+s1_peaceful,llm,20416,1,e7_grid,"--model Qwen/Qwen3.8-27B-FP8-1M --prompt-version v1g --expose-buildable-grid",30,5,true,6g_agent_buildable_grid=true;6g_agent_snap_to_buildable=true
+s1_peaceful,llm,20417,1,e7_grid,"--model Qwen/Qwen3.8-27B-FP8-1M --prompt-version v1g --expose-buildable-grid",30,5,true,6g_agent_buildable_grid=true;6g_agent_snap_to_buildable=true
+s1_peaceful,llm,20418,1,e7_grid,"--model Qwen/Qwen3.8-27B-FP8-1M --prompt-version v1g --expose-buildable-grid",30,5,true,6g_agent_buildable_grid=true;6g_agent_snap_to_buildable=true
+s1_peaceful,llm,20419,1,e7_grid,"--model Qwen/Qwen3.8-27B-FP8-1M --prompt-version v1g --expose-buildable-grid",30,5,true,6g_agent_buildable_grid=true;6g_agent_snap_to_buildable=true
+s1_peaceful,llm,20420,1,e7_grid,"--model Qwen/Qwen3.8-27B-FP8-1M --prompt-version v1g --expose-buildable-grid",30,5,true,6g_agent_buildable_grid=true;6g_agent_snap_to_buildable=true
+s1_peaceful,rule,20421,1,e7_rulesnap,,30,5,true,6g_agent_snap_to_buildable=true
+s1_peaceful,rule,20422,1,e7_rulesnap,,30,5,true,6g_agent_snap_to_buildable=true
+s1_peaceful,rule,20423,1,e7_rulesnap,,30,5,true,6g_agent_snap_to_buildable=true
+s1_peaceful,rule,20424,1,e7_rulesnap,,30,5,true,6g_agent_snap_to_buildable=true
+s1_peaceful,rule,20425,1,e7_rulesnap,,30,5,true,6g_agent_snap_to_buildable=true
+s1_peaceful,rule,20426,1,e7_rulesnap,,30,5,true,6g_agent_snap_to_buildable=true
+s1_peaceful,rule,20427,1,e7_rulesnap,,30,5,true,6g_agent_snap_to_buildable=true
+s1_peaceful,rule,20428,1,e7_rulesnap,,30,5,true,6g_agent_snap_to_buildable=true
+s1_peaceful,rule,20429,1,e7_rulesnap,,30,5,true,6g_agent_snap_to_buildable=true
+s1_peaceful,rule,20430,1,e7_rulesnap,,30,5,true,6g_agent_snap_to_buildable=true
